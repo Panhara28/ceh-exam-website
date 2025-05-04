@@ -7,15 +7,18 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Label } from "@/components/ui/label"
 import { Progress } from "@/components/ui/progress"
 import { Clock, ChevronLeft, ChevronRight, RotateCcw, CheckCircle, AlertCircle, ArrowLeft } from "lucide-react"
-import { sampleQuestions } from "@/data/questions"
 
 // Type for storing answers by question ID
 type AnswerMap = {
   [questionId: number]: number | null
 }
 
-export default function ExamInterface() {
-  const [questions, setQuestions] = useState([])
+type ExamInterfaceProps ={
+  dataQuestions: any
+}
+
+export default function ExamInterface({dataQuestions}: ExamInterfaceProps) {
+  const [questions, setQuestions]: any = useState([])
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [selectedAnswers, setSelectedAnswers] = useState<(number | null)[]>([])
   const [timeRemaining, setTimeRemaining] = useState(60 * 60) // 60 minutes in seconds
@@ -27,7 +30,7 @@ export default function ExamInterface() {
   // Function to shuffle the questions array
   const shuffleQuestions = () => {
     // Create a copy of the original questions
-    const shuffled = [...sampleQuestions]
+    const shuffled = [...dataQuestions]
 
     // Fisher-Yates shuffle algorithm
     for (let i = shuffled.length - 1; i > 0; i--) {
@@ -55,10 +58,10 @@ export default function ExamInterface() {
   // Initialize the exam with randomized questions
   useEffect(() => {
     // Always shuffle questions on page load
-    const randomizedQuestions = shuffleQuestions()
+    const randomizedQuestions: any = shuffleQuestions()
     console.log(
       "Questions shuffled on page load:",
-      randomizedQuestions.map((q) => q.id),
+      randomizedQuestions.map((q: any) => q.id),
     )
 
     // Check if there's saved state in localStorage
@@ -185,10 +188,10 @@ export default function ExamInterface() {
     clearSavedState()
 
     // Randomize questions again
-    const randomizedQuestions = shuffleQuestions()
+    const randomizedQuestions: any = shuffleQuestions()
     console.log(
       "Questions re-randomized on restart:",
-      randomizedQuestions.map((q) => q.id),
+      randomizedQuestions.map((q: any) => q.id),
     )
 
     setQuestions(randomizedQuestions)
@@ -202,7 +205,7 @@ export default function ExamInterface() {
 
   const calculateScore = () => {
     let correctCount = 0
-    selectedAnswers.forEach((selected, index) => {
+    selectedAnswers.forEach((selected: any, index: any) => {
       if (selected === questions[index]?.correctAnswer) {
         correctCount++
       }
@@ -238,7 +241,7 @@ export default function ExamInterface() {
     )
   }
 
-  const currentQuestion = questions[currentQuestionIndex]
+  const currentQuestion : any= questions[currentQuestionIndex]
   const score = calculateScore()
   const unansweredCount = getUnansweredCount()
 
@@ -266,7 +269,7 @@ export default function ExamInterface() {
             )}
           </CardHeader>
           <CardContent className="space-y-4">
-            {questions.map((q, index) => (
+            {questions.map((q: any, index: any) => (
               <div
                 key={index}
                 className="border rounded-md p-4 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
@@ -338,7 +341,7 @@ export default function ExamInterface() {
 
           <div className="space-y-4 mt-8">
             <h3 className="text-xl font-semibold">Question Review</h3>
-            {questions.map((q, index) => (
+            {questions.map((q: any, index: any) => (
               <div
                 key={index}
                 className={`p-4 rounded-md ${
@@ -351,7 +354,7 @@ export default function ExamInterface() {
                   {index + 1}. {q.question}
                 </p>
                 <div className="mt-2 ml-4">
-                  {q.options.map((option, optIndex) => (
+                  {q.options.map((option: any, optIndex: any) => (
                     <div
                       key={optIndex}
                       className={`py-1 ${
@@ -403,7 +406,7 @@ export default function ExamInterface() {
             value={selectedAnswers[currentQuestionIndex]?.toString() || ""}
             onValueChange={(value) => handleAnswerSelect(Number.parseInt(value))}
           >
-            {currentQuestion.options.map((option, index) => (
+            {currentQuestion.options.map((option: any, index: any) => (
               <div key={index} className="flex items-center space-x-2 py-2">
                 <RadioGroupItem value={index.toString()} id={`option-${index}`} />
                 <Label htmlFor={`option-${index}`} className="cursor-pointer">
@@ -429,7 +432,7 @@ export default function ExamInterface() {
       </Card>
 
       <div className="flex flex-wrap mt-6">
-        {questions.map((_, index) => (
+        {questions.map((_: any, index: any) => (
           <Button
             key={index}
             variant={
