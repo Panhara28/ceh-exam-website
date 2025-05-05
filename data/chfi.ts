@@ -2516,4 +2516,315 @@ export const CHFI_DUMP_QUESTIONS = [
     options: ["Dependency Walker", "SysAnalyzer", "ResourcesExtract", "PEiD"],
     correctAnswer: 0,
   },
+  {
+    id: 265,
+    question:
+      "When an investigator contacts by telephone the domain administrator or controller listed by a Who is lookup to request all e-mails sent and received for a user account be preserved, what U.S.C. statute authorizes this phone call and obligates the ISP to preserve e-mail records?",
+    options: [
+      "Title 18, Section 1030",
+      "Title 18, Section 2703(d)",
+      "Title 18, Section Chapter 90",
+      "Title 18, Section 2703(f)"
+    ],
+    correctAnswer: 3,
+  },
+  {
+    id: 266,
+    question:
+      "If you come across a sheepdip machine at your client site, what would you infer?",
+    options: [
+      "A sheepdip coordinates several honeypots",
+      "A sheepdip computer is another name for a honeypot",
+      "A sheepdip computer is used only for virus-checking.",
+      "A sheepdip computer defers a denial of service attack"
+    ],
+    correctAnswer: 2,
+  },
+  {
+    id: 267,
+    question:
+      "In a computer forensics investigation, what describes the route that evidence takes from the time you find it until the case is closed or goes to court?",
+    options: [
+      "rules of evidence",
+      "law of probability",
+      "chain of custody",
+      "policy of separation"
+    ],
+    correctAnswer: 2,
+  },
+  {
+    id: 268,
+    question:
+      "How many characters long is the fixed-length MD5 algorithm checksum of a critical system file?",
+    options: [
+      "128",
+      "64",
+      "32",
+      "16"
+    ],
+    correctAnswer: 3,
+  },
+  {
+    id: 269,
+    question:
+      "You are working on a thesis for your doctorate degree in Computer Science. Your thesis is based on HTML, DHTML, and other web-based languages and how they have evolved over the years.\nYou navigate to archive.org and view the HTML code of news.com. You then navigate to the current news.com website and copy over the source code. While searching through the code, you come across something abnormal: What have you found?",
+    options: [
+      "Web bug",
+      "CGI code",
+      "Trojan.downloader",
+      "Blind bug"
+    ],
+    correctAnswer: 0,
+  },
+  {
+    id: 270,
+    question:
+      "You are using DriveSpy, a forensic tool and want to copy 150 sectors where the starting sector is 1709 on the primary hard drive. Which of the following formats correctly specifies these sectors?",
+    options: [
+      "0:1000, 150",
+      "0:1709, 150",
+      "1:1709, 150",
+      "0:1709-1858"
+    ],
+    correctAnswer: 1,
+  },
+  {
+    id: 271,
+    question:
+      "A honey pot deployed with the IP 172.16.1.108 was compromised by an attacker. Given below is an excerpt from a Snort binary capture of the attack. Decipher the activity carried out by the attacker by studying the log. Please note that you are required to infer only what is explicit in the excerpt.\n(Note: The student is being tested on concepts learnt during passive OS fingerprinting, basic TCP/IP connection concepts and the ability to read packet signatures from a sniff dump.)\n03/15-20:21:24.107053 211.185.125.124:3500 -> 172.16.1.108:111\nTCP TTL:43 TOS:0x0 ID:29726 IpLen:20 DgmLen:52 DF\n***A**** Seq: 0x9B6338C5 Ack: 0x5820ADD0 Win: 0x7D78 TcpLen: 32\nTCP Options (3) => NOP NOP TS: 23678634 2878772\n03/15-20:21:24.452051 211.185.125.124:789 -> 172.16.1.103:111\nUDP TTL:43 TOS:0x0 ID:29733 IpLen:20 DgmLen:84\nLen: 64 - 01 0A 8A 0A 00 00 00 00 00 00 00 02 00 01 86 A0 . .............\n00 00 00 02 00 00 00 03 00 00 00 00 00 00 00 00 ................\n00 00 00 00 00 00 00 00 00 01 86 B8 00 00 00 01 . ..............\n00 00 00 11 00 00 00 00 ........\n03/15-20:21:24.730436 211.185.125.124:790 -> 172.16.1.103:32773\nUDP TTL:43 TOS:0x0 ID:29781 IpLen:20 DgmLen:1104\nLen: 1084 - 47 F7 9F 63 00 00 00 00 00 00 00 02 00 01 86 B8",
+    options: [
+      "The attacker has conducted a network sweep on port 111",
+      "The attacker has scanned and exploited the system using Buffer Overflow",
+      "The attacker has used a Trojan on port 32773",
+      "The attacker has installed a backdoor"
+    ],
+    correctAnswer: 0,
+  },
+  {
+    id: 272,
+    question:
+      "You are working for a large clothing manufacturer as a computer forensics investigator and are called in to investigate an unusual case of an employee possibly stealing clothing designs from the company and selling them under a different brand name for a different company. What you discover during the course of the investigation is that the clothing designs are actually original products of the employee and the company has no policy against an employee selling his own designs on his own time. The only thing that you can find that the employee is doing wrong is that his clothing design incorporates the same graphic symbol as that of the company with only the wording in the graphic being different. What area of the law is the employee violating?",
+    options: [
+      "trademark law",
+      "copyright law",
+      "printright law",
+      "brandmark law"
+    ],
+    correctAnswer: 0,
+  },
+  {
+    id: 273,
+    question:
+      "What file structure database would you expect to find on floppy disks?",
+    options: [
+      "NTFS",
+      "FAT32",
+      "FAT16",
+      "FAT12"
+    ],
+    correctAnswer: 3,
+  },
+  {
+    id: 274,
+    question:
+      "What type of attack occurs when an attacker can force a router to stop forwarding packets by flooding the router with many open connections simultaneously so that all the hosts behind the router are effectively disabled?",
+    options: [
+      "digital attack",
+      "denial of service",
+      "physical attack",
+      "ARP redirect"
+    ],
+    correctAnswer: 1,
+  },
+  {
+    id: 275,
+    question:
+      "When examining a file with a Hex Editor, what space does the file header occupy?",
+    options: [
+      "the last several bytes of the file",
+      "the first several bytes of the file",
+      "none, file headers are contained in the FAT",
+      "one byte at the beginning of the file"
+    ],
+    correctAnswer: 1,
+  },
+  {
+    id: 276,
+    question:
+      "In the context of file deletion process, which of the following statement holds true?",
+    options: [
+      "When files are deleted, the data is overwritten and the cluster marked as available",
+      "The longer a disk is in use, the less likely it is that deleted files will be overwritten",
+      "While booting, the machine may create temporary files that can delete evidence",
+      "Secure delete programs work by completely overwriting the file in one go"
+    ],
+    correctAnswer: 2,
+  },
+  {
+    id: 277,
+    question:
+      "A suspect is accused of violating the acceptable use of computing resources, as he has visited adult websites and downloaded images. The investigator wants to demonstrate that the suspect did indeed visit these sites. However, the suspect has cleared the search history and emptied the cookie cache. Moreover, he has removed any images he might have downloaded. What can the investigator do to prove the violation?",
+    options: [
+      "Image the disk and try to recover deleted files",
+      "Seek the help of co-workers who are eye-witnesses",
+      "Check the Windows registry for connection data (you may or may not recover)",
+      "Approach the websites for evidence"
+    ],
+    correctAnswer: 0,
+  },
+  {
+    id: 278,
+    question:
+      "A(n) _____________________ is one that's performed by a computer program rather than the attacker manually performing the steps in the attack sequence.",
+    options: [
+      "blackout attack",
+      "automated attack",
+      "distributed attack",
+      "central processing attack"
+    ],
+    correctAnswer: 1,
+  },
+  {
+    id: 279,
+    question:
+      "The offset in a hexadecimal code is:",
+    options: [
+      "The last byte after the colon",
+      "The 0x at the beginning of the code",
+      "The 0x at the end of the code",
+      "The first byte after the colon"
+    ],
+    correctAnswer: 1,
+  },
+  {
+    id: 280,
+    question:
+      "It takes _____________ mismanaged case/s to ruin your professional reputation as a computer forensics examiner?",
+    options: [
+      "by law, three",
+      "quite a few",
+      "only one",
+      "at least two"
+    ],
+    correctAnswer: 2,
+  },
+  {
+    id: 281,
+    question:
+      "With the standard Linux second extended file system (Ext2fs), a file is deleted when the inode internal link count reaches ________.",
+    options: [
+      "0",
+      "10",
+      "100",
+      "1"
+    ],
+    correctAnswer: 0,
+  }, {
+    id: 282,
+    question:
+      "When examining the log files from a Windows IIS Web Server, how often is a new log file created?",
+    options: [
+      "the same log is used at all times",
+      "a new log file is created everyday",
+      "a new log file is created each week",
+      "a new log is created each time the Web Server is started"
+    ],
+    correctAnswer: 1,
+  },
+  {
+    id: 283,
+    question:
+      "Which part of the Windows Registry contains the user's password file?",
+    options: [
+      "HKEY_LOCAL_MACHINE",
+      "HKEY_CURRENT_CONFIGURATION",
+      "HKEY_USER",
+      "HKEY_CURRENT_USER"
+    ],
+    correctAnswer: 0,
+  },
+  {
+    id: 284,
+    question:
+      "An employee is attempting to wipe out data stored on a couple of compact discs (CDs) and digital video discs (DVDs) by using a large magnet. You inform him that this method will not be effective in wiping out the data because CDs and DVDs are ______________ media used to store large amounts of data and are not affected by the magnet.",
+    options: [
+      "logical",
+      "anti-magnetic",
+      "magnetic",
+      "optical"
+    ],
+    correctAnswer: 3,
+  },
+  {
+    id: 285,
+    question:
+      "Lance wants to place a honeypot on his network. Which of the following would be your recommendations?",
+    options: [
+      "Use a system that has a dynamic addressing on the network",
+      "Use a system that is not directly interacting with the router",
+      "Use it on a system in an external DMZ in front of the firewall",
+      "It doesn't matter as all replies are faked"
+    ],
+    correctAnswer: 3,
+  },
+  {
+    id: 286,
+    question:
+      "What does the acronym POST mean as it relates to a PC?",
+    options: [
+      "Primary Operations Short Test",
+      "PowerOn Self Test",
+      "Pre Operational Situation Test",
+      "Primary Operating System Test"
+    ],
+    correctAnswer: 1,
+  },
+  {
+    id: 287,
+    question:
+      "Which legal document allows law enforcement to search an office, place of business, or other locale for evidence relating to an alleged crime?",
+    options: [
+      "bench warrant",
+      "wire tap",
+      "subpoena",
+      "search warrant"
+    ],
+    correctAnswer: 3,
+  },
+  {
+    id: 288,
+    question:
+      "You are working as an investigator for a corporation and you have just received instructions from your manager to assist in the collection of 15 hard drives that are part of an ongoing investigation. Your job is to complete the required evidence custody forms to properly document each piece of evidence as it is collected by other members of your team. Your manager instructs you to complete one multi-evidence form for the entire case and a single-evidence form for each hard drive. How will these forms be stored to help preserve the chain of custody of the case?",
+    options: [
+      "All forms should be placed in an approved secure container because they are now primary evidence in the case.",
+      "The multi-evidence form should be placed in the report file and the single-evidence forms should be kept with each hard drive in an approved secure container.",
+      "The multi-evidence form should be placed in an approved secure container with the hard drives and the single-evidence forms should be placed in the report file.",
+      "All forms should be placed in the report file because they are now primary evidence in the case."
+    ],
+    correctAnswer: 1,
+  },
+  {
+    id: 289,
+    question:
+      "The MD5 program is used to:",
+    options: [
+      "wipe magnetic media before recycling it",
+      "make directories on an evidence disk",
+      "view graphics files on an evidence drive",
+      "verify that a disk is not altered when you examine it"
+    ],
+    correctAnswer: 3,
+  },
+  {
+    id: 300,
+    question:
+      "Which is a standard procedure to perform during all computer forensics investigations?",
+    options: [
+      "with the hard drive removed from the suspect PC, check the date and time in the system's CMOS",
+      "with the hard drive in the suspect PC, check the date and time in the File Allocation Table",
+      "with the hard drive removed from the suspect PC, check the date and time in the system's RAM",
+      "with the hard drive in the suspect PC, check the date and time in the system's CMOS"
+    ],
+    correctAnswer: 0,
+  }
 ];
