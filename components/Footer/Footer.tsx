@@ -27,43 +27,35 @@ export default function Footer() {
             </div>
             <div className="grid grid-cols-2 gap-4 md:gap-8 md:flex-1 lg:grid-cols-3">
               <div className="space-y-2">
-                <h4 className="font-medium text-sm">Platform</h4>
+                <h4 className="font-medium text-sm">Educations</h4>
                 <ul className="space-y-2 text-sm">
                   <li>
                     <Link
-                      href="#"
+                      href="/learning"
                       className="text-muted-foreground hover:text-foreground"
                     >
-                      Courses
+                      Learning
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="#"
+                      href="/preparations"
                       className="text-muted-foreground hover:text-foreground"
                     >
-                      Pricing
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="#"
-                      className="text-muted-foreground hover:text-foreground"
-                    >
-                      FAQ
+                      Exam Preparations
                     </Link>
                   </li>
                 </ul>
               </div>
               <div className="space-y-2">
-                <h4 className="font-medium text-sm">Company</h4>
+                <h4 className="font-medium text-sm">CamShield</h4>
                 <ul className="space-y-2 text-sm">
                   <li>
                     <Link
-                      href="#"
+                      href="/about-us"
                       className="text-muted-foreground hover:text-foreground"
                     >
-                      About
+                      About Us
                     </Link>
                   </li>
                   <li>
@@ -71,7 +63,7 @@ export default function Footer() {
                       href="#"
                       className="text-muted-foreground hover:text-foreground"
                     >
-                      Blog
+                      News
                     </Link>
                   </li>
                   <li>
@@ -89,7 +81,7 @@ export default function Footer() {
                 <ul className="space-y-2 text-sm">
                   <li>
                     <Link
-                      href="#"
+                      href="/terms"
                       className="text-muted-foreground hover:text-foreground"
                     >
                       Terms
@@ -97,18 +89,10 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="#"
+                      href="/privacy"
                       className="text-muted-foreground hover:text-foreground"
                     >
                       Privacy
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="#"
-                      className="text-muted-foreground hover:text-foreground"
-                    >
-                      Cookies
                     </Link>
                   </li>
                 </ul>
