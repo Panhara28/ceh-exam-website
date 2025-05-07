@@ -117,7 +117,7 @@ export default function Footer() {
           </div>
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 border-t mt-8 pt-8">
             <p className="text-xs text-muted-foreground">
-              © {new Date().getFullYear()} CyberLearn. All rights reserved.
+              © {new Date().getFullYear()} CamShield. All rights reserved.
             </p>
             <div className="flex items-center gap-4">
               <Link
