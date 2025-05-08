@@ -34,22 +34,23 @@ export default function LearningSection() {
                 </div>
                 <CardTitle className="text-2xl">Digital Forensics</CardTitle>
                 <CardDescription className="text-base">
-                  Learn to investigate digital crimes and recover evidence
+                  Sharpen your skills with MCQs designed to help you ace
+                  certification exams.
                 </CardDescription>
               </CardHeader>
               <CardContent className="pt-6">
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-center">
                     <span className="mr-2 h-1.5 w-1.5 rounded-full bg-purple-600 dark:bg-purple-400"></span>
-                    Data Recovery Techniques
+                    Practice Exam Questions on Data Recovery
                   </li>
                   <li className="flex items-center">
                     <span className="mr-2 h-1.5 w-1.5 rounded-full bg-purple-600 dark:bg-purple-400"></span>
-                    Mobile Device Forensics
+                    Mobile Forensics Certification Prep
                   </li>
                   <li className="flex items-center">
                     <span className="mr-2 h-1.5 w-1.5 rounded-full bg-purple-600 dark:bg-purple-400"></span>
-                    Network Forensics
+                    Network Forensics Scenario-Based MCQs
                   </li>
                 </ul>
               </CardContent>
@@ -70,22 +71,23 @@ export default function LearningSection() {
                 </div>
                 <CardTitle className="text-2xl">Ethical Hacking</CardTitle>
                 <CardDescription className="text-base">
-                  Master the art of finding and fixing security vulnerabilities
+                  Prepare for certification exams with targeted MCQs covering
+                  real-world attack scenarios and defense techniques.
                 </CardDescription>
               </CardHeader>
               <CardContent className="pt-6">
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-center">
                     <span className="mr-2 h-1.5 w-1.5 rounded-full bg-emerald-600 dark:bg-emerald-400"></span>
-                    Penetration Testing
+                    Penetration Testing Question Sets
                   </li>
                   <li className="flex items-center">
                     <span className="mr-2 h-1.5 w-1.5 rounded-full bg-emerald-600 dark:bg-emerald-400"></span>
-                    Web Application Security
+                    Web Application Vulnerability MCQs
                   </li>
                   <li className="flex items-center">
                     <span className="mr-2 h-1.5 w-1.5 rounded-full bg-emerald-600 dark:bg-emerald-400"></span>
-                    Social Engineering
+                    Social Engineering Exam Practice
                   </li>
                 </ul>
               </CardContent>

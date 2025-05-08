@@ -10,12 +10,12 @@ export default function HeroSection() {
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
             <div className="space-y-4">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-gradient-to-r from-[#2071f8] to-[#d43636] text-transparent bg-clip-text">
-                Master Cybersecurity Skills with Expert-Led Courses
+                Level Up Your Cybersecurity Journey with CamShield
               </h1>
               <p className="md:text-xl bg-gradient-to-r from-[#d35f5f]/80 to-[#2a7aff]/80 text-transparent bg-clip-text font-medium">
-                Gain practical knowledge in digital forensics and ethical
-                hacking through our comprehensive courses designed for all skill
-                levels.
+                Stay ahead with expert insights, certification dumps, and
+                hands-on articles designed to sharpen your skills in
+                cybersecurity and more.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
