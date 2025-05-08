@@ -1,100 +1,119 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { Label } from "@/components/ui/label"
-import { Progress } from "@/components/ui/progress"
-import { Clock, ChevronLeft, ChevronRight, RotateCcw, CheckCircle, AlertCircle, ArrowLeft } from "lucide-react"
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Label } from "@/components/ui/label";
+import { Progress } from "@/components/ui/progress";
+import {
+  Clock,
+  ChevronLeft,
+  ChevronRight,
+  RotateCcw,
+  CheckCircle,
+  AlertCircle,
+  ArrowLeft,
+} from "lucide-react";
 
 // Type for storing answers by question ID
 type AnswerMap = {
-  [questionId: number]: number | null
-}
+  [questionId: number]: number | null;
+};
 
-type ExamInterfaceProps ={
-  dataQuestions: any
-}
+type ExamInterfaceProps = {
+  dataQuestions: any;
+};
 
-export default function ExamInterface({dataQuestions}: ExamInterfaceProps) {
-  const [questions, setQuestions]: any = useState([])
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
-  const [selectedAnswers, setSelectedAnswers] = useState<(number | null)[]>([])
-  const [timeRemaining, setTimeRemaining] = useState(60 * 60) // 60 minutes in seconds
-  const [examSubmitted, setExamSubmitted] = useState(false)
-  const [showResults, setShowResults] = useState(false)
-  const [reviewMode, setReviewMode] = useState(false)
-  const [examStarted, setExamStarted] = useState(false)
+export default function ExamInterface({ dataQuestions }: ExamInterfaceProps) {
+  const [questions, setQuestions]: any = useState([]);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [selectedAnswers, setSelectedAnswers] = useState<(number | null)[]>([]);
+  const [timeRemaining, setTimeRemaining] = useState(60 * 60); // 60 minutes in seconds
+  const [examSubmitted, setExamSubmitted] = useState(false);
+  const [showResults, setShowResults] = useState(false);
+  const [reviewMode, setReviewMode] = useState(false);
+  const [examStarted, setExamStarted] = useState(false);
 
   // Function to shuffle the questions array
   const shuffleQuestions = () => {
     // Create a copy of the original questions
-    const shuffled = [...dataQuestions]
+    const shuffled = [...dataQuestions];
 
     // Fisher-Yates shuffle algorithm
     for (let i = shuffled.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1))
-      ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
     }
 
-    return shuffled
-  }
+    return shuffled;
+  };
 
   // Convert array of answers to a map of question ID -> answer
-  const answersToMap = (questions: any[], answers: (number | null)[]): AnswerMap => {
-    const answerMap: AnswerMap = {}
+  const answersToMap = (
+    questions: any[],
+    answers: (number | null)[]
+  ): AnswerMap => {
+    const answerMap: AnswerMap = {};
     questions.forEach((question, index) => {
-      answerMap[question.id] = answers[index]
-    })
-    return answerMap
-  }
+      answerMap[question.id] = answers[index];
+    });
+    return answerMap;
+  };
 
   // Convert map of question ID -> answer back to array based on current question order
-  const mapToAnswers = (questions: any[], answerMap: AnswerMap): (number | null)[] => {
-    return questions.map((question) => answerMap[question.id] ?? null)
-  }
+  const mapToAnswers = (
+    questions: any[],
+    answerMap: AnswerMap
+  ): (number | null)[] => {
+    return questions.map((question) => answerMap[question.id] ?? null);
+  };
 
   // Initialize the exam with randomized questions
   useEffect(() => {
     // Always shuffle questions on page load
-    const randomizedQuestions: any = shuffleQuestions()
-    console.log(
-      "Questions shuffled on page load:",
-      randomizedQuestions.map((q: any) => q.id),
-    )
+    const randomizedQuestions: any = dataQuestions;
 
     // Check if there's saved state in localStorage
-    const savedState = loadExamState()
+    const savedState = loadExamState();
 
     if (savedState) {
       // Convert saved answers to a map by question ID
-      const answerMap = answersToMap(savedState.questions, savedState.selectedAnswers)
+      const answerMap = answersToMap(
+        savedState.questions,
+        savedState.selectedAnswers
+      );
 
       // Map the answers to the new shuffled question order
-      const remappedAnswers = mapToAnswers(randomizedQuestions, answerMap)
+      const remappedAnswers = mapToAnswers(randomizedQuestions, answerMap);
 
       // Restore saved state but with newly shuffled questions
-      setQuestions(randomizedQuestions)
-      setCurrentQuestionIndex(savedState.currentQuestionIndex)
-      setSelectedAnswers(remappedAnswers)
-      setTimeRemaining(savedState.timeRemaining)
-      setExamSubmitted(savedState.examSubmitted)
-      setShowResults(savedState.showResults)
-      setReviewMode(savedState.reviewMode)
+      setQuestions(randomizedQuestions);
+      setCurrentQuestionIndex(savedState.currentQuestionIndex);
+      setSelectedAnswers(remappedAnswers);
+      setTimeRemaining(savedState.timeRemaining);
+      setExamSubmitted(savedState.examSubmitted);
+      setShowResults(savedState.showResults);
+      setReviewMode(savedState.reviewMode);
     } else {
       // Start fresh with randomized questions
-      setQuestions(randomizedQuestions)
-      setSelectedAnswers(Array(randomizedQuestions.length).fill(null))
+      setQuestions(randomizedQuestions);
+      setSelectedAnswers(Array(randomizedQuestions.length).fill(null));
     }
 
-    setExamStarted(true)
-  }, [])
+    setExamStarted(true);
+  }, []);
 
   // Save state to localStorage whenever it changes
   useEffect(() => {
     if (examStarted) {
-      saveExamState()
+      saveExamState();
     }
   }, [
     questions,
@@ -105,7 +124,7 @@ export default function ExamInterface({dataQuestions}: ExamInterfaceProps) {
     showResults,
     reviewMode,
     examStarted,
-  ])
+  ]);
 
   // Timer effect
   useEffect(() => {
@@ -113,17 +132,17 @@ export default function ExamInterface({dataQuestions}: ExamInterfaceProps) {
       const timer = setInterval(() => {
         setTimeRemaining((prev) => {
           if (prev <= 1) {
-            clearInterval(timer)
-            handleSubmitExam()
-            return 0
+            clearInterval(timer);
+            handleSubmitExam();
+            return 0;
           }
-          return prev - 1
-        })
-      }, 1000)
+          return prev - 1;
+        });
+      }, 1000);
 
-      return () => clearInterval(timer)
+      return () => clearInterval(timer);
     }
-  }, [examStarted, examSubmitted, showResults])
+  }, [examStarted, examSubmitted, showResults]);
 
   // Save exam state to localStorage
   const saveExamState = () => {
@@ -135,97 +154,102 @@ export default function ExamInterface({dataQuestions}: ExamInterfaceProps) {
       examSubmitted,
       showResults,
       reviewMode,
-    }
+    };
 
-    localStorage.setItem("examState", JSON.stringify(state))
-  }
+    localStorage.setItem("examState", JSON.stringify(state));
+  };
 
   // Load exam state from localStorage
   const loadExamState = () => {
-    const savedState = localStorage.getItem("examState")
-    return savedState ? JSON.parse(savedState) : null
-  }
+    const savedState = localStorage.getItem("examState");
+    return savedState ? JSON.parse(savedState) : null;
+  };
 
   // Clear saved state
   const clearSavedState = () => {
-    localStorage.removeItem("examState")
-  }
+    localStorage.removeItem("examState");
+  };
 
   const handleAnswerSelect = (answerIndex: number) => {
-    const newSelectedAnswers = [...selectedAnswers]
-    newSelectedAnswers[currentQuestionIndex] = answerIndex
-    setSelectedAnswers(newSelectedAnswers)
-  }
+    const newSelectedAnswers = [...selectedAnswers];
+    newSelectedAnswers[currentQuestionIndex] = answerIndex;
+    setSelectedAnswers(newSelectedAnswers);
+  };
 
   const handleNextQuestion = () => {
     if (currentQuestionIndex < questions.length - 1) {
-      setCurrentQuestionIndex(currentQuestionIndex + 1)
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
     }
-  }
+  };
 
   const handlePreviousQuestion = () => {
     if (currentQuestionIndex > 0) {
-      setCurrentQuestionIndex(currentQuestionIndex - 1)
+      setCurrentQuestionIndex(currentQuestionIndex - 1);
     }
-  }
+  };
 
   const handleReviewExam = () => {
-    setReviewMode(true)
-  }
+    setReviewMode(true);
+  };
 
   const handleBackToExam = () => {
-    setReviewMode(false)
-  }
+    setReviewMode(false);
+  };
 
   const handleSubmitExam = () => {
-    setExamSubmitted(true)
-    setShowResults(true)
-    setReviewMode(false)
-  }
+    setExamSubmitted(true);
+    setShowResults(true);
+    setReviewMode(false);
+  };
 
   const handleRestartExam = () => {
     // Clear saved state
-    clearSavedState()
+    clearSavedState();
 
     // Randomize questions again
-    const randomizedQuestions: any = shuffleQuestions()
+    const randomizedQuestions: any = shuffleQuestions();
     console.log(
       "Questions re-randomized on restart:",
-      randomizedQuestions.map((q: any) => q.id),
-    )
+      randomizedQuestions.map((q: any) => q.id)
+    );
 
-    setQuestions(randomizedQuestions)
-    setSelectedAnswers(Array(randomizedQuestions.length).fill(null))
-    setCurrentQuestionIndex(0)
-    setTimeRemaining(60 * 60)
-    setExamSubmitted(false)
-    setShowResults(false)
-    setReviewMode(false)
-  }
+    setQuestions(randomizedQuestions);
+    setSelectedAnswers(Array(randomizedQuestions.length).fill(null));
+    setCurrentQuestionIndex(0);
+    setTimeRemaining(60 * 60);
+    setExamSubmitted(false);
+    setShowResults(false);
+    setReviewMode(false);
+  };
 
   const calculateScore = () => {
-    let correctCount = 0
+    let correctCount = 0;
     selectedAnswers.forEach((selected: any, index: any) => {
       if (selected === questions[index]?.correctAnswer) {
-        correctCount++
+        correctCount++;
       }
-    })
+    });
     return {
       score: correctCount,
       total: questions.length,
-      percentage: questions.length > 0 ? Math.round((correctCount / questions.length) * 100) : 0,
-    }
-  }
+      percentage:
+        questions.length > 0
+          ? Math.round((correctCount / questions.length) * 100)
+          : 0,
+    };
+  };
 
   const formatTime = (seconds: number) => {
-    const mins = Math.floor(seconds / 60)
-    const secs = seconds % 60
-    return `${mins.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`
-  }
+    const mins = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${mins.toString().padStart(2, "0")}:${secs
+      .toString()
+      .padStart(2, "0")}`;
+  };
 
   const getUnansweredCount = () => {
-    return selectedAnswers.filter((answer) => answer === null).length
-  }
+    return selectedAnswers.filter((answer) => answer === null).length;
+  };
 
   // If questions haven't loaded yet, show a loading state
   if (!examStarted || questions.length === 0) {
@@ -238,18 +262,22 @@ export default function ExamInterface({dataQuestions}: ExamInterfaceProps) {
           </div>
         </CardContent>
       </Card>
-    )
+    );
   }
 
-  const currentQuestion : any= questions[currentQuestionIndex]
-  const score = calculateScore()
-  const unansweredCount = getUnansweredCount()
+  const currentQuestion: any = questions[currentQuestionIndex];
+  const score = calculateScore();
+  const unansweredCount = getUnansweredCount();
 
   if (reviewMode) {
     return (
       <div className="space-y-6">
         <div className="flex justify-between items-center mb-4">
-          <Button variant="outline" onClick={handleBackToExam} className="flex items-center">
+          <Button
+            variant="outline"
+            onClick={handleBackToExam}
+            className="flex items-center"
+          >
             <ArrowLeft className="h-4 w-4 mr-2" /> Back to Exam
           </Button>
           <div className="flex items-center space-x-2 text-orange-600 dark:text-orange-400">
@@ -260,11 +288,14 @@ export default function ExamInterface({dataQuestions}: ExamInterfaceProps) {
 
         <Card>
           <CardHeader>
-            <CardTitle className="text-2xl text-center">Review Your Answers</CardTitle>
+            <CardTitle className="text-2xl text-center">
+              Review Your Answers
+            </CardTitle>
             {unansweredCount > 0 && (
               <div className="mt-2 p-2 bg-amber-50 border border-amber-200 rounded-md text-amber-700 text-center dark:bg-amber-900/20 dark:border-amber-800 dark:text-amber-400">
                 <AlertCircle className="h-4 w-4 inline-block mr-2" />
-                You have {unansweredCount} unanswered question{unansweredCount > 1 ? "s" : ""}
+                You have {unansweredCount} unanswered question
+                {unansweredCount > 1 ? "s" : ""}
               </div>
             )}
           </CardHeader>
@@ -278,22 +309,27 @@ export default function ExamInterface({dataQuestions}: ExamInterfaceProps) {
                   <div className="flex-1">
                     <h3 className="font-medium">
                       Question {index + 1}:{" "}
-                      {q.question.length > 100 ? q.question.substring(0, 100) + "..." : q.question}
+                      {q.question.length > 100
+                        ? q.question.substring(0, 100) + "..."
+                        : q.question}
                     </h3>
                     {selectedAnswers[index] !== null ? (
                       <p className="mt-2 text-gray-700 dark:text-gray-300">
-                        Your answer: {q.options[selectedAnswers[index] as number]}
+                        Your answer:{" "}
+                        {q.options[selectedAnswers[index] as number]}
                       </p>
                     ) : (
-                      <p className="mt-2 text-red-500 dark:text-red-400">Not answered</p>
+                      <p className="mt-2 text-red-500 dark:text-red-400">
+                        Not answered
+                      </p>
                     )}
                   </div>
                   <Button
                     variant="ghost"
                     size="sm"
                     onClick={() => {
-                      setCurrentQuestionIndex(index)
-                      setReviewMode(false)
+                      setCurrentQuestionIndex(index);
+                      setReviewMode(false);
                     }}
                   >
                     Edit
@@ -310,7 +346,7 @@ export default function ExamInterface({dataQuestions}: ExamInterfaceProps) {
           </CardFooter>
         </Card>
       </div>
-    )
+    );
   }
 
   if (showResults) {
@@ -334,7 +370,8 @@ export default function ExamInterface({dataQuestions}: ExamInterfaceProps) {
             ) : (
               <div className="mt-4 p-4 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-100 rounded-md">
                 <AlertCircle className="h-5 w-5 inline-block mr-2" />
-                You did not pass this attempt. Review the questions and try again.
+                You did not pass this attempt. Review the questions and try
+                again.
               </div>
             )}
           </div>
@@ -361,11 +398,12 @@ export default function ExamInterface({dataQuestions}: ExamInterfaceProps) {
                         optIndex === q.correctAnswer
                           ? "text-green-700 dark:text-green-400 font-medium"
                           : optIndex === selectedAnswers[index]
-                            ? "text-red-700 dark:text-red-400 font-medium"
-                            : ""
+                          ? "text-red-700 dark:text-red-400 font-medium"
+                          : ""
                       }`}
                     >
-                      {String.fromCharCode(65 + optIndex)}. {option} {optIndex === q.correctAnswer && "✓"}
+                      {String.fromCharCode(65 + optIndex)}. {option}{" "}
+                      {optIndex === q.correctAnswer && "✓"}
                     </div>
                   ))}
                 </div>
@@ -379,7 +417,7 @@ export default function ExamInterface({dataQuestions}: ExamInterfaceProps) {
           </Button>
         </CardFooter>
       </Card>
-    )
+    );
   }
 
   return (
@@ -389,7 +427,10 @@ export default function ExamInterface({dataQuestions}: ExamInterfaceProps) {
           <span className="font-medium">
             Question {currentQuestionIndex + 1} of {questions.length}
           </span>
-          <Progress value={((currentQuestionIndex + 1) / questions.length) * 100} className="w-32" />
+          <Progress
+            value={((currentQuestionIndex + 1) / questions.length) * 100}
+            className="w-32"
+          />
         </div>
         <div className="flex items-center space-x-2 text-orange-600 dark:text-orange-400">
           <Clock className="h-5 w-5" />
@@ -404,11 +445,16 @@ export default function ExamInterface({dataQuestions}: ExamInterfaceProps) {
         <CardContent>
           <RadioGroup
             value={selectedAnswers[currentQuestionIndex]?.toString() || ""}
-            onValueChange={(value) => handleAnswerSelect(Number.parseInt(value))}
+            onValueChange={(value) =>
+              handleAnswerSelect(Number.parseInt(value))
+            }
           >
             {currentQuestion.options.map((option: any, index: any) => (
               <div key={index} className="flex items-center space-x-2 py-2">
-                <RadioGroupItem value={index.toString()} id={`option-${index}`} />
+                <RadioGroupItem
+                  value={index.toString()}
+                  id={`option-${index}`}
+                />
                 <Label htmlFor={`option-${index}`} className="cursor-pointer">
                   {option}
                 </Label>
@@ -417,7 +463,11 @@ export default function ExamInterface({dataQuestions}: ExamInterfaceProps) {
           </RadioGroup>
         </CardContent>
         <CardFooter className="flex justify-between">
-          <Button variant="outline" onClick={handlePreviousQuestion} disabled={currentQuestionIndex === 0}>
+          <Button
+            variant="outline"
+            onClick={handlePreviousQuestion}
+            disabled={currentQuestionIndex === 0}
+          >
             <ChevronLeft className="mr-2 h-4 w-4" /> Previous
           </Button>
 
@@ -436,7 +486,11 @@ export default function ExamInterface({dataQuestions}: ExamInterfaceProps) {
           <Button
             key={index}
             variant={
-              index === currentQuestionIndex ? "default" : selectedAnswers[index] !== null ? "secondary" : "outline"
+              index === currentQuestionIndex
+                ? "default"
+                : selectedAnswers[index] !== null
+                ? "secondary"
+                : "outline"
             }
             className="h-7 w-7 p-0 text-xs m-0.5 rounded-sm"
             onClick={() => setCurrentQuestionIndex(index)}
@@ -446,6 +500,5 @@ export default function ExamInterface({dataQuestions}: ExamInterfaceProps) {
         ))}
       </div>
     </div>
-  )
+  );
 }
-
