@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -78,7 +78,7 @@ export default function ExamInterface({ dataQuestions }: ExamInterfaceProps) {
   // Initialize the exam with randomized questions
   useEffect(() => {
     // Always shuffle questions on page load
-    const randomizedQuestions: any = dataQuestions;
+    const randomizedQuestions: any = shuffleQuestions();
 
     // Check if there's saved state in localStorage
     const savedState = loadExamState();
@@ -391,21 +391,35 @@ export default function ExamInterface({ dataQuestions }: ExamInterfaceProps) {
                   {index + 1}. {q.question}
                 </p>
                 <div className="mt-2 ml-4">
-                  {q.options.map((option: any, optIndex: any) => (
-                    <div
-                      key={optIndex}
-                      className={`py-1 ${
-                        optIndex === q.correctAnswer
-                          ? "text-green-700 dark:text-green-400 font-medium"
-                          : optIndex === selectedAnswers[index]
-                          ? "text-red-700 dark:text-red-400 font-medium"
-                          : ""
-                      }`}
-                    >
-                      {String.fromCharCode(65 + optIndex)}. {option}{" "}
-                      {optIndex === q.correctAnswer && "✓"}
-                    </div>
-                  ))}
+                  {q.options.map((option: any, optIndex: any) => {
+                    if (optIndex === q.correctAnswer) {
+                      return (
+                        <div
+                          key={optIndex}
+                          className={`py-1 ${
+                            optIndex === q.correctAnswer
+                              ? "text-green-700 dark:text-green-400 font-medium"
+                              : optIndex === selectedAnswers[index]
+                              ? "text-red-700 dark:text-red-400 font-medium"
+                              : ""
+                          }`}
+                        >
+                          <div
+                            key={optIndex}
+                            className={`py-1 ${
+                              optIndex === q.correctAnswer
+                                ? "text-green-700 dark:text-green-400 font-medium"
+                                : optIndex === selectedAnswers[index]
+                                ? "text-red-700 dark:text-red-400 font-medium"
+                                : ""
+                            }`}
+                          >
+                            {option} {optIndex === q.correctAnswer && "✓"}
+                          </div>
+                        </div>
+                      );
+                    }
+                  })}
                 </div>
               </div>
             ))}
@@ -449,17 +463,7 @@ export default function ExamInterface({ dataQuestions }: ExamInterfaceProps) {
               handleAnswerSelect(Number.parseInt(value))
             }
           >
-            {currentQuestion.options.map((option: any, index: any) => (
-              <div key={index} className="flex items-center space-x-2 py-2">
-                <RadioGroupItem
-                  value={index.toString()}
-                  id={`option-${index}`}
-                />
-                <Label htmlFor={`option-${index}`} className="cursor-pointer">
-                  {option}
-                </Label>
-              </div>
-            ))}
+            <RenderOptions currentQuestion={currentQuestion} />
           </RadioGroup>
         </CardContent>
         <CardFooter className="flex justify-between">
@@ -502,3 +506,26 @@ export default function ExamInterface({ dataQuestions }: ExamInterfaceProps) {
     </div>
   );
 }
+
+const RenderOptions = ({ currentQuestion }: any) => {
+  const shuffledOptions = useMemo(() => {
+    const rendered = currentQuestion.options.map((option: any, index: any) => (
+      <div key={index} className="flex items-center space-x-2 py-2">
+        <RadioGroupItem value={index.toString()} id={`option-${index}`} />
+        <Label htmlFor={`option-${index}`} className="cursor-pointer">
+          {option}
+        </Label>
+      </div>
+    ));
+
+    // Shuffle once when currentQuestion changes
+    for (let i = rendered.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [rendered[i], rendered[j]] = [rendered[j], rendered[i]];
+    }
+
+    return rendered;
+  }, [currentQuestion]);
+
+  return <div>{shuffledOptions}</div>;
+};

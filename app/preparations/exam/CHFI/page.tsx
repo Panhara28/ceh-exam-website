@@ -10,7 +10,11 @@ export default function PreparationExameCHFIPage() {
           <h1 className="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-800 dark:text-gray-100">
             Ethical Hacker Certification Exam Practice
           </h1>
-          <ExamInterface dataQuestions={CHFI_DUMP_QUESTIONS} />
+          <ExamInterface
+            dataQuestions={CHFI_DUMP_QUESTIONS.filter(
+              (item) => item.id >= 1 && item.id <= 28
+            )}
+          />
         </div>
       </main>
     </>

