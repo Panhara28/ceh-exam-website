@@ -1054,7 +1054,7 @@ export const CHFI_DUMP_QUESTIONS = [
       "A security-enabled universal group was deleted.",
       "A member was added to a security-enabled universal group.",
       "A security-enabled universal group was changed.",
-      "A security-enabled universal group was deleted.",
+      "A security-disabled universal group was deleted.",
     ],
     correctAnswer: 0,
   },
