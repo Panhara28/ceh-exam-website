@@ -1963,8 +1963,8 @@ export const CHFI_DUMP_QUESTIONS = [
   {
     id: 204,
     question: "Which hashing algorithm is widely used in digital forensics?",
-    options: ["SHA-256", "MD5", "All of the above", "SHA-1"],
-    correctAnswer: 2,
+    options: ["SHA-256", "MD5", "SHA-1", "All of the above"],
+    correctAnswer: 3,
   },
   {
     id: 205,

@@ -12,7 +12,7 @@ export default function PreparationExameCHFIPage() {
           </h1>
           <ExamInterface
             dataQuestions={CHFI_DUMP_QUESTIONS.filter(
-              (item) => item.id >= 1 && item.id <= 169
+              (item) => item.id >= 1 && item.id <= 197
             )}
           />
         </div>
