@@ -3,7 +3,7 @@ import LearningInterface from "@/components/learning-interface";
 import { Metadata } from "next";
 
 export default function LearningChfiPage() {
-  return <LearningInterface learningData={CHFI_DUMP_QUESTIONS} />;
+  return <LearningInterface learningData={CHFI_DUMP_QUESTIONS} title="Computer Hacking Forensic Investigator (CHFI) Exam Practice"/>;
 }
 
 export const metadata: Metadata = {

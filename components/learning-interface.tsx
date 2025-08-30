@@ -4,15 +4,17 @@ import { Card, CardContent } from "@/components/ui/card";
 
 type LearningInterfaceProps = {
   learningData: any[];
+  title?: string;
 };
 
 export default function LearningInterface({
   learningData,
+  title
 }: LearningInterfaceProps) {
   return (
-    <div className="container mx-auto py-8 px-4 max-w-4xl">
+    <div className="container mx-auto py-8 px-4 max-w-7xl">
       <h1 className="text-2xl font-bold mb-6 text-center">
-        Computer Hacking Forensic Investigator (CHFI) Exam Practice
+        {title}
       </h1>
 
       <div className="text-sm mb-6">

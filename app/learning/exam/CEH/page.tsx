@@ -5,7 +5,7 @@ import { Metadata } from "next";
 export default function LearningExamCEH() {
   return (
     <>
-      <LearningInterface learningData={CEH_DUMP_QUESTIONS} />
+      <LearningInterface learningData={CEH_DUMP_QUESTIONS} title="Certified Ethical Hacker (CEH) Exam Practice"/>
     </>
   );
 }

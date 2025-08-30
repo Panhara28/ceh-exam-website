@@ -21,6 +21,7 @@ import {
   AlertCircle,
   ArrowLeft,
 } from "lucide-react";
+import { useRouter, usePathname } from "next/navigation";
 
 // Type for storing answers by question ID
 type AnswerMap = {
@@ -40,22 +41,20 @@ export default function ExamInterface({ dataQuestions }: ExamInterfaceProps) {
   const [showResults, setShowResults] = useState(false);
   const [reviewMode, setReviewMode] = useState(false);
   const [examStarted, setExamStarted] = useState(false);
+  const router = useRouter();
+  const pathname = typeof window !== "undefined" ? window.location.pathname : "";
 
   // Function to shuffle the questions array
   const shuffleQuestions = () => {
-    // Create a copy of the original questions
     const shuffled = [...dataQuestions];
-
-    // Fisher-Yates shuffle algorithm
     for (let i = shuffled.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
     }
-
     return shuffled;
   };
 
-  // Convert array of answers to a map of question ID -> answer
+  // Convert array of answers to a map by question ID
   const answersToMap = (
     questions: any[],
     answers: (number | null)[]
@@ -75,26 +74,46 @@ export default function ExamInterface({ dataQuestions }: ExamInterfaceProps) {
     return questions.map((question) => answerMap[question.id] ?? null);
   };
 
+  // Save exam state to localStorage
+  const saveExamState = () => {
+    const questionsToSave = questions.map((q: any) => {
+      const { correctAnswer, ...rest } = q;
+      return rest;
+    });
+    const state = {
+      questions: questionsToSave,
+      currentQuestionIndex,
+      selectedAnswers,
+      timeRemaining,
+      examSubmitted,
+      showResults,
+      reviewMode,
+    };
+    localStorage.setItem("examState", JSON.stringify(state));
+  };
+
+  // Load exam state from localStorage
+  const loadExamState = () => {
+    const savedState = localStorage.getItem("examState");
+    return savedState ? JSON.parse(savedState) : null;
+  };
+
+  // Clear saved state
+  const clearSavedState = () => {
+    localStorage.removeItem("examState");
+  };
+
   // Initialize the exam with randomized questions
   useEffect(() => {
-    // Always shuffle questions on page load
-    const randomizedQuestions: any = dataQuestions;
-
-    // Check if there's saved state in localStorage
+    const shuffledQuestions: any = shuffleQuestions().slice(0, 120);
     const savedState = loadExamState();
-
     if (savedState) {
-      // Convert saved answers to a map by question ID
       const answerMap = answersToMap(
         savedState.questions,
         savedState.selectedAnswers
       );
-
-      // Map the answers to the new shuffled question order
-      const remappedAnswers = mapToAnswers(randomizedQuestions, answerMap);
-
-      // Restore saved state but with newly shuffled questions
-      setQuestions(randomizedQuestions);
+      const remappedAnswers = mapToAnswers(shuffledQuestions, answerMap);
+      setQuestions(shuffledQuestions);
       setCurrentQuestionIndex(savedState.currentQuestionIndex);
       setSelectedAnswers(remappedAnswers);
       setTimeRemaining(savedState.timeRemaining);
@@ -102,12 +121,11 @@ export default function ExamInterface({ dataQuestions }: ExamInterfaceProps) {
       setShowResults(savedState.showResults);
       setReviewMode(savedState.reviewMode);
     } else {
-      // Start fresh with randomized questions
-      setQuestions(randomizedQuestions);
-      setSelectedAnswers(Array(randomizedQuestions.length).fill(null));
+      setQuestions(shuffledQuestions);
+      setSelectedAnswers(Array(shuffledQuestions.length).fill(null));
     }
-
     setExamStarted(true);
+    // eslint-disable-next-line
   }, []);
 
   // Save state to localStorage whenever it changes
@@ -115,6 +133,7 @@ export default function ExamInterface({ dataQuestions }: ExamInterfaceProps) {
     if (examStarted) {
       saveExamState();
     }
+    // eslint-disable-next-line
   }, [
     questions,
     currentQuestionIndex,
@@ -139,36 +158,49 @@ export default function ExamInterface({ dataQuestions }: ExamInterfaceProps) {
           return prev - 1;
         });
       }, 1000);
-
       return () => clearInterval(timer);
     }
+    // eslint-disable-next-line
   }, [examStarted, examSubmitted, showResults]);
 
-  // Save exam state to localStorage
-  const saveExamState = () => {
-    const state = {
-      questions,
-      currentQuestionIndex,
-      selectedAnswers,
-      timeRemaining,
-      examSubmitted,
-      showResults,
-      reviewMode,
+  // Warn user before leaving the exam page (browser navigation/reload or in-app navigation)
+  useEffect(() => {
+    // Only enable on CEH or CHFI exam pages
+    if (
+      !pathname.startsWith("/preparations/exam/CEH") &&
+      !pathname.startsWith("/preparations/exam/CHFI")
+    ) {
+      return;
+    }
+    if (!examStarted || examSubmitted) return;
+
+    const message =
+      "Are you sure you want to leave this exam? Your progress will be lost.";
+
+    // Browser navigation (refresh, close, etc.)
+    const handleBeforeUnload = (e: BeforeUnloadEvent) => {
+      e.preventDefault();
+      e.returnValue = message;
+      return message;
     };
+    window.addEventListener("beforeunload", handleBeforeUnload);
 
-    localStorage.setItem("examState", JSON.stringify(state));
-  };
+    // In-app navigation (back/forward)
+    const handlePopState = (e: PopStateEvent) => {
+      if (!window.confirm(message)) {
+        window.history.pushState(null, "", window.location.pathname);
+        throw "Route change aborted by user";
+      } else {
+        clearSavedState();
+      }
+    };
+    window.addEventListener("popstate", handlePopState);
 
-  // Load exam state from localStorage
-  const loadExamState = () => {
-    const savedState = localStorage.getItem("examState");
-    return savedState ? JSON.parse(savedState) : null;
-  };
-
-  // Clear saved state
-  const clearSavedState = () => {
-    localStorage.removeItem("examState");
-  };
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+      window.removeEventListener("popstate", handlePopState);
+    };
+  }, [pathname, examStarted, examSubmitted]);
 
   const handleAnswerSelect = (answerIndex: number) => {
     const newSelectedAnswers = [...selectedAnswers];
@@ -203,16 +235,8 @@ export default function ExamInterface({ dataQuestions }: ExamInterfaceProps) {
   };
 
   const handleRestartExam = () => {
-    // Clear saved state
     clearSavedState();
-
-    // Randomize questions again
-    const randomizedQuestions: any = shuffleQuestions();
-    console.log(
-      "Questions re-randomized on restart:",
-      randomizedQuestions.map((q: any) => q.id)
-    );
-
+    const randomizedQuestions: any = shuffleQuestions().slice(0, 120);
     setQuestions(randomizedQuestions);
     setSelectedAnswers(Array(randomizedQuestions.length).fill(null));
     setCurrentQuestionIndex(0);
